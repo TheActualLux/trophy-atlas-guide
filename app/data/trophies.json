@@ -2,391 +2,897 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
+ "note": "Guide copy authored for this bounty from the official 55-trophy list above. Specifics beyond the supplied list (chapter contents, mission order, repeat behavior, exact counts) are unverified estimates and are framed as such in every entry.",
+ "phases": [
+  {
+   "id": "p1",
+   "name": "Opening Moves",
+   "time": "~15 minutes",
+   "about": "Get control of the game and clear the opening mission. Nothing on the list can be started before this, so it is the natural first step.",
+   "trophies": [
+    2
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "Chapters 1-3",
+   "time": "~2-3 hours (estimate)",
+   "about": "Push the main story through its first three chapters. Chapter trophies t3, t4 and t5 plus the missions t8 and t9 land here.",
+   "trophies": [
+    3,
+    4,
+    5,
+    8,
+    9
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "Chapters 4 & the Finale",
+   "time": "~2-4 hours (estimate)",
+   "about": "The last numbered chapter, the required missions in between, and the final mission itself. Chapter trophy t6, mission trophies t10-t13 and the gold final-mission trophy t7 come from this stretch.",
+   "trophies": [
+    6,
+    7,
+    10,
+    11,
+    12,
+    13
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "Partners, Heists & Street Crime",
+   "time": "~4-6 hours (estimate)",
+   "about": "Free-roam crime work once the story tools exist: partner robberies t33 and t34, Combat Focus t36, the VCIA and Rhino oddities t37 and t38, stealth and vault robberies t39 and t40, armored trucks t41, gang operations t43, the melee drive-by t51, and the money loop t52 and t53.",
+   "trophies": [
+    33,
+    34,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    43,
+    51,
+    52,
+    53
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "Stranger Strands",
+   "time": "~3-5 hours (estimate)",
+   "about": "The named stranger strands: Andy t22, Kenton t23, Billy t24, Randy t26 and Tyrone t27, Bret's hunt t29, plus the odd-moment trophies t49 and t50 that these strands tend to surface.",
+   "trophies": [
+    22,
+    23,
+    24,
+    26,
+    27,
+    29,
+    49,
+    50
+   ]
+  },
+  {
+   "id": "p6",
+   "name": "Activities & Challenges",
+   "time": "~6-10 hours (estimate)",
+   "about": "The volume and skill block: stunts t15, activity sampler t16, Shooting Range golds t17, Top Fun t18, race wins t19, the fishing duel t20, arcade t21 and fifty challenges t32.",
+   "trophies": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    32
+   ]
+  },
+  {
+   "id": "p7",
+   "name": "Collections, Exploration & Completion",
+   "time": "~10-15 hours (estimate)",
+   "about": "The long tail that feeds 100% completion t14: the strand count t25, meditation t28, card sets t30, WAiNK t31, vehicle discovery t35, full exploration t42, and the one-off moments t44-t48, plus property and app tasks t54 and t55.",
+   "trophies": [
+    14,
+    25,
+    28,
+    30,
+    31,
+    35,
+    42,
+    44,
+    45,
+    46,
+    47,
+    48,
+    54,
+    55
+   ]
+  },
+  {
+   "id": "p8",
+   "name": "The Platinum",
+   "time": "at the very end",
+   "about": "Trophy t1 unlocks by itself when the other fifty-four are done. Use the checklist to find the last gaps.",
+   "trophies": [
+    1
+   ]
+  }
+ ],
  "trophies": [
   {
    "id": 1,
    "name": "Vice Got a Price!",
    "description": "Congratulations! You're a Leonida Legend.",
    "grade": "platinum",
-   "guide": "Earn the other 54 trophies."
+   "guide": "The platinum is awarded automatically the moment your fifty-fourth other trophy unlocks, so treat it as a certificate for finishing the list rather than a task of its own. Work through the roadmap phases in order, keep the checklist honest with your own ticks, and leave no collection strand half-finished. Nothing here needs effort beyond the rest of the guide; when the last trophy pops, this one follows on the same screen.",
+   "hint": "Finish everything else first; this one cannot be earned early.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 5,
+   "time": "54 trophies' worth",
+   "phase": "p8",
+   "missable": "Cannot be missed in any real sense: it is the automatic reward for a complete list. The only way to lose it is to stop before the last trophy."
   },
   {
    "id": 2,
    "name": "Just Like Paradise",
    "description": "Complete Gone Fishing.",
    "grade": "bronze",
-   "guide": "Finish the opening mission, Gone Fishing."
+   "guide": "Gone Fishing is the opening mission, so it comes almost immediately after you take control of the game. Follow the mission markers, complete every objective it gives you, and let the closing scenes play out to the end. As an early required mission it is expected to unlock for everyone who finishes the opening, so treat it as a formality rather than a challenge.",
+   "hint": "It is the very first mission; just play the opening.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 1,
+   "time": "~15 minutes",
+   "phase": "p1",
+   "missable": "Not expected to be missable: it is the opening mission of the story and cannot be skipped past. Repeatability is not verified, but nothing about the wording suggests a condition that can be failed permanently."
   },
   {
    "id": 3,
    "name": "Paradise Lost",
    "description": "Complete Chapter 1.",
    "grade": "bronze",
-   "guide": "Finish Chapter 1."
+   "guide": "Chapter 1 covers the first stretch of the story after the opening mission. Keep progressing the main missions until the chapter's closing scene rolls, at which point the trophy unlocks automatically. There is no stated side condition, so a straightforward playthrough of the chapter is all the evidence supports.",
+   "hint": "Just finish the first chapter's missions in order.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 1,
+   "time": "~1 hour (estimate)",
+   "phase": "p2",
+   "missable": "Not expected to be missable: chapter trophies follow the story by construction. Any conditions attached to individual missions inside the chapter are not verified, so play missions fully rather than quitting them early."
   },
   {
    "id": 4,
    "name": "T**s Ass Drug Money",
    "description": "Complete Chapter 2.",
    "grade": "bronze",
-   "guide": "Finish Chapter 2."
+   "guide": "Chapter 2 continues the main storyline and unlocks when you complete its final mission. Do not worry about optional content during this stretch; the trophy only cares that the chapter is finished. If you are following the roadmap, you will pick this up naturally between the opening and the move into Vice City proper.",
+   "hint": "The second chapter's last mission is the trigger.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 1,
+   "time": "~1 hour (estimate)",
+   "phase": "p2",
+   "missable": "Not expected to be missable for the same reason as the other chapter trophies. Missions are assumed fully playable within the chapter; the exact mission list of Chapter 2 is not verified, so let the story guide you."
   },
   {
    "id": 5,
    "name": "Vice City, Baby!",
    "description": "Complete Chapter 3.",
    "grade": "bronze",
-   "guide": "Finish Chapter 3."
+   "guide": "Chapter 3 is the next milestone of the story and, by its name, the point where the setting reaches Vice City itself. Complete the chapter's missions in order until its ending scene plays. The trophy should unlock on the chapter's conclusion without any extra requirements, making it one of the safest ticks on the list.",
+   "hint": "Reach the end of the third chapter's story missions.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 1,
+   "time": "~1 hour (estimate)",
+   "phase": "p2",
+   "missable": "Not expected to be missable. As with the other chapters, complete every mission it offers rather than skipping cutscenes mid-mission, since unverified retry behavior is the only theoretical risk."
   },
   {
    "id": 6,
    "name": "Top Of The World, Ma",
    "description": "Complete Chapter 4.",
    "grade": "bronze",
-   "guide": "Finish Chapter 4."
+   "guide": "Chapter 4 is the last numbered chapter before the endgame missions. Push the main story to the chapter's final scene and the trophy unlocks by itself. Consider scheduling your side-activity sweep before the finale, because the 100% completion work in the later phases is easier to organize while the world is fully open.",
+   "hint": "The fourth chapter's ending scene is the unlock.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 1,
+   "time": "~1-2 hours (estimate)",
+   "phase": "p3",
+   "missable": "Not expected to be missable: it unlocks with the chapter. The only planning note is ordering, since some players prefer to clear collections before the finale; nothing in the description suggests the chapter blocks that."
   },
   {
    "id": 7,
    "name": "You Gotta Know When to Get Off",
    "description": "Complete the final mission.",
    "grade": "gold",
-   "guide": "Finish the final mission (gold)."
+   "guide": "This gold trophy unlocks when you complete the game's final mission. Play the closing mission of the story to its end; no medal or performance condition appears in the official wording, so plain completion is the conservative reading. Treat it as the story's last gate before the long tail of collectibles and challenges in the later phases.",
+   "hint": "Finish the story's last mission, nothing more.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 2,
+   "time": "~30-60 minutes (estimate)",
+   "phase": "p3",
+   "missable": "Not expected to be missable: the final mission ends the story and the trophy follows it. Whether final missions can be replayed afterwards is not verified, so do not deliberately leave it until last unless you enjoy risk."
   },
   {
    "id": 8,
    "name": "Trust",
    "description": "Complete Breakfast Run.",
    "grade": "bronze",
-   "guide": "Finish the mission Breakfast Run."
+   "guide": "Breakfast Run is a named story mission listed among the early chapters. Start it from the main mission flow and complete every objective to its end screen. Since it is a required mission, it is expected to unlock for any playthrough that reaches and finishes it, so this is one of the automatic ticks on the road.",
+   "hint": "A required early story mission; play it through.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 1,
+   "time": "within Chapter 1-3 (estimate)",
+   "phase": "p2",
+   "missable": "Not expected to be missable, as it is a required mission. If a mission can be failed and retried, the retry presumably still counts; permanent failure states for required missions would be highly unusual, but that is an assumption rather than a verified fact."
   },
   {
    "id": 9,
    "name": "Break the Bank",
    "description": "Complete The Cartel Heist.",
    "grade": "bronze",
-   "guide": "Finish the mission The Cartel Heist."
+   "guide": "The Cartel Heist is a required story mission and unlocks the trophy when it is finished. Play through the heist's setup and execution objectives rather than abandoning it partway. As with the other mission trophies, no special performance is mentioned in the official wording, so completion alone is the target.",
+   "hint": "The cartel heist mission, start to finish.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 2,
+   "time": "within Chapters 1-3 (estimate)",
+   "phase": "p2",
+   "missable": "Not expected to be missable for a completed playthrough. Heist-style missions sometimes have approach choices; the description attaches no condition to any particular approach, so pick whichever suits you."
   },
   {
    "id": 10,
    "name": "Family Matters",
    "description": "Complete Child's Play.",
    "grade": "bronze",
-   "guide": "Finish the mission Child's Play."
+   "guide": "Child's Play is a story mission; finish it and the trophy unlocks. Follow the mission's markers through to its conclusion and let the ending scene run. Nothing in the official description suggests optional conditions, so this is a straightforward completion tick on the way through the chapters.",
+   "hint": "A required mission, likely later in the story.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 1,
+   "time": "within Chapters 2-4 (estimate)",
+   "phase": "p3",
+   "missable": "Not expected to be missable. The starter list does not say which chapter holds it, so the time here is an estimate; the mission list itself will make it obvious once you are playing."
   },
   {
    "id": 11,
    "name": "DWNFALL",
    "description": "Complete Headliners.",
    "grade": "bronze",
-   "guide": "Finish the mission Headliners."
+   "guide": "Headliners is a required mission and pops when you complete it. See its objectives through to the end rather than retrying or quitting mid-mission. The official description attaches no extra condition, so completion is the whole requirement and no performance target exists.",
+   "hint": "Another required story mission on the list.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 1,
+   "time": "within Chapters 2-4 (estimate)",
+   "phase": "p3",
+   "missable": "Not expected to be missable. As with all mission trophies here, the honest caveat is that retry behavior is assumed from series convention, not verified from the game itself."
   },
   {
    "id": 12,
    "name": "Hi-Jacked",
    "description": "Complete VCIA Takedown.",
    "grade": "bronze",
-   "guide": "Finish the mission VCIA Takedown."
+   "guide": "VCIA Takedown is a named story mission; the trophy unlocks when the mission ends. Work through its objectives in order and finish the closing scene. As a required mission it should be impossible to miss on a full playthrough, assuming missions cannot be permanently skipped, which is the normal series pattern but is not independently verified.",
+   "hint": "A story mission tied to VCIA, the airport authority.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 2,
+   "time": "within Chapters 3-4 (estimate)",
+   "phase": "p3",
+   "missable": "Not expected to be missable. Note the thematic overlap with trophy t37, which is also set at VCIA; the free-roam stunt there is separate from this mission, so do not confuse the two."
   },
   {
    "id": 13,
    "name": "Snow Storm",
    "description": "Complete Operation Savage Glory.",
    "grade": "bronze",
-   "guide": "Finish the mission Operation Savage Glory."
+   "guide": "Operation Savage Glory is a required story mission; completing it unlocks the trophy. Play the mission through its full objective list to the end scene. No medal or performance threshold appears in the official description, so treat plain completion as sufficient and move on.",
+   "hint": "A required late-story operation mission.",
+   "tags": [
+    "story-critical"
+   ],
+   "difficulty": 2,
+   "time": "within Chapters 3-4 (estimate)",
+   "phase": "p3",
+   "missable": "Not expected to be missable. The name suggests a set-piece operation, so expect a longer mission; that affects your evening, not the trophy's difficulty."
   },
   {
    "id": 14,
    "name": "A Long Road",
    "description": "Attain 100% Completion.",
    "grade": "gold",
-   "guide": "Reach 100% completion (gold)."
+   "guide": "100% completion is the single largest commitment on the list: every checklist item the game tracks, from missions and activities to collections, must be finished. Expect it to dominate the platinum's total playtime and to require a completion screen check after each batch of content you clear. Budget generously, keep your own progress ticks up to date, and sweep the world map systematically rather than chasing percentages piecemeal.",
+   "hint": "The in-game completion stat is the authority; sweep the map region by region.",
+   "tags": [],
+   "difficulty": 5,
+   "time": "10-20 hours (estimate, dominates the platinum)",
+   "phase": "p7",
+   "missable": "Not expected to be missable in the usual sense, because it is a stat you build up to. The real risk is discovering an unknown requirement late; cross-check the in-game completion list early and often. Exactly which items the game counts is not verified from the official description alone."
   },
   {
    "id": 15,
    "name": "Cunning Stunts",
    "description": "Complete 250 Stunts.",
    "grade": "silver",
-   "guide": "Pull off 250 stunts (silver)."
+   "guide": "250 stunts is a volume trophy: jumps, drifts and other stunt actions across the state, counted cumulatively by the wording. Chain stunt opportunities such as ramps, hills and hairpins on every drive between objectives instead of saving them for one session. At a steady pace across a full playthrough this should pass naturally, but it is long enough that a deliberate stunt loop in a fast car is the reliable closer.",
+   "hint": "Every ramp and drift counts toward the running total.",
+   "tags": [],
+   "difficulty": 4,
+   "time": "~4-8 hours across the campaign (estimate)",
+   "phase": "p6",
+   "missable": "Not expected to be missable, since the count is cumulative and stunts presumably remain available after the story. The exact list of what counts as a stunt is not verified, so favor obvious ramp and drift actions."
   },
   {
    "id": 16,
    "name": "Master of None",
    "description": "Try each type of activity once.",
    "grade": "bronze",
-   "guide": "Try all 9 activity types once."
+   "guide": "The official wording asks you to try each type of activity once, which the starter's notes count as nine types. Open each activity you find, whether that is racing, the shooting range, fishing, arcade games or anything else, at least one time each, even if you do not finish the session. Because the exact activity list is not independently verified, use the in-game tracker or activity menu as the authority before declaring this done.",
+   "hint": "Open every kind of activity once, even briefly.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~1-2 hours (estimate)",
+   "phase": "p6",
+   "missable": "Treat as possibly missable only in the sense that an unknown ninth activity could be overlooked; activities are presumably always available. The honest position is that the nine types come from the starter's notes, not from verified play."
   },
   {
    "id": 17,
    "name": "The Shootist",
    "description": "Earn a gold medal in all Shooting Range challenges.",
    "grade": "silver",
-   "guide": "Gold all 42 Shooting Range challenges (silver)."
+   "guide": "Every Shooting Range challenge needs a gold medal, and the starter's notes put the challenge count at 42. Practice each challenge type before chasing gold, since several weapon drills reward rhythm and target order over raw speed. Expect this to be one of the harder trophies on the list and budget several focused sessions for it, ideally with your loadout and settings settled first.",
+   "hint": "Gold in all 42 Shooting Range challenges; practice before scoring.",
+   "tags": [],
+   "difficulty": 4,
+   "time": "~3-6 hours (estimate)",
+   "phase": "p6",
+   "missable": "Not expected to be missable: the range is a repeatable activity and medals presumably persist. Whether existing medals can be re-earned for a better score is not verified, but that does not affect the trophy."
   },
   {
    "id": 18,
    "name": "Top Fun",
    "description": "Win a Top Fun Drone Race at every location.",
    "grade": "bronze",
-   "guide": "Win a Top Fun drone race at all 14 locations."
+   "guide": "A Top Fun drone race must be won at every location, and the starter's notes put the count at 14. A win in racing means finishing first, so treat every course as a race to win rather than a sightseeing tour. Learn each layout's shortcuts on an early attempt and then push for the win; the in-game location list is your checklist.",
+   "hint": "Win, not just finish, a drone race at all 14 locations.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~2-4 hours (estimate)",
+   "phase": "p6",
+   "missable": "Not expected to be missable, as races are repeatable activities by convention. The 14 locations come from the starter's notes and are not independently verified, so let the in-game menu confirm the count."
   },
   {
    "id": 19,
    "name": "Earn Cash, Not Kudos",
    "description": "Win 20 different races.",
    "grade": "bronze",
-   "guide": "Win 20 different races."
+   "guide": "Twenty different races must be won, and different means twenty distinct races rather than twenty wins of the same one. Spread your wins across the race types and locations the game offers, keeping a rough count as you go. Repeating a race you have already won presumably adds nothing, so diversify early instead of farming a favorite.",
+   "hint": "Twenty distinct race wins; variety is the requirement.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~2-4 hours (estimate)",
+   "phase": "p6",
+   "missable": "Not expected to be missable. The main uncertainty is whether wins from different race categories all count toward the twenty; the description says different races, so the safest read is twenty unique events of any category."
   },
   {
    "id": 20,
    "name": "Baited My Tackle",
    "description": "Beat Cal in a fishing challenge.",
    "grade": "bronze",
-   "guide": "Beat Cal in a fishing challenge."
+   "guide": "This trophy asks you to beat Cal in a fishing challenge. Find the challenge through the fishing activity and outperform Cal by whatever the challenge measures, whether that is size, weight or count of fish. If the first attempt falls short, the challenge should be repeatable, though repeatability is assumed from the activity format rather than verified.",
+   "hint": "A named rival fishing duel; win it once.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~30-60 minutes (estimate)",
+   "phase": "p6",
+   "missable": "Not expected to be missable assuming the challenge can be re-attempted. If a loss somehow closed the challenge permanently, that would be a one-shot design the description does not hint at; the conservative move is to attempt it when your fishing handling feels comfortable."
   },
   {
    "id": 21,
    "name": "Stick Fiddler",
    "description": "Complete an arcade game.",
    "grade": "bronze",
-   "guide": "Finish one arcade game."
+   "guide": "Complete any one arcade game to unlock this trophy. Find a cabinet through the arcade activity, play the game to its natural end, and let the result screen settle. Since only one completion is required, pick the game you find easiest rather than attempting all of them; the wording sets the bar at a single finish.",
+   "hint": "One cabinet, one finished game, that is all.",
+   "tags": [],
+   "difficulty": 1,
+   "time": "~15-30 minutes (estimate)",
+   "phase": "p6",
+   "missable": "Not expected to be missable. The starter list does not name the arcade games, so which cabinet you use is a free choice; nothing in the description suggests a specific game is required."
   },
   {
    "id": 22,
    "name": "Road to Rehabilitation",
    "description": "Complete the final mission for Andy.",
    "grade": "bronze",
-   "guide": "Finish Andy's last mission."
+   "guide": "Andy's strand ends with a final mission that unlocks this trophy when completed. Follow Andy's side missions from wherever they begin in the world until the strand's last mission appears, then finish it. Treat the strand as required content for 100% completion as well, so finishing it does double duty on your checklist.",
+   "hint": "Play Andy's strand through to its last mission.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~1-2 hours for the strand (estimate)",
+   "phase": "p5",
+   "missable": "Not expected to be missable for a full playthrough, since strands are part of completion. The starter list does not say where Andy's missions start, so the location and any level of the strand gating the final mission are estimates."
   },
   {
    "id": 23,
    "name": "This Was No Boat Accident",
    "description": "Complete the final mission for Kenton.",
    "grade": "bronze",
-   "guide": "Finish Kenton's last mission."
+   "guide": "Kenton's strand closes with a final mission; finish it and the trophy unlocks. Work through Kenton's missions in order, because strands typically gate their final mission behind the earlier ones. Keep the strand's objectives in mind during free-roam sessions so the whole line is finished in a handful of sittings.",
+   "hint": "Kenton's strand, played in order to the end.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~1-2 hours for the strand (estimate)",
+   "phase": "p5",
+   "missable": "Not expected to be missable. As with the other strands, the assumption that earlier strand missions are prerequisites for the final one follows series convention and is not verified from the official description."
   },
   {
    "id": 24,
    "name": "The Lone Rider",
    "description": "Complete the final mission for Billy.",
    "grade": "bronze",
-   "guide": "Finish Billy's last mission."
+   "guide": "Billy's strand finishes with its own final mission, and completing that mission unlocks the trophy. Start Billy's missions early in your playthrough so the strand's steps are spread out rather than rushed at the end of the campaign. The strand also feeds 100% completion, so finishing it serves both goals at once.",
+   "hint": "Billy's strand, played in order to the end.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~1-2 hours for the strand (estimate)",
+   "phase": "p5",
+   "missable": "Not expected to be missable. The strand's starting point and length are not verified, so treat the time here as a rough estimate until you are in it."
   },
   {
    "id": 25,
    "name": "Strangers & Freaks",
    "description": "Complete 8 mission strands for strangers across the state of Leonida.",
    "grade": "silver",
-   "guide": "Finish 8 stranger strands (silver)."
+   "guide": "Eight mission strands for strangers across Leonida must be completed, and the silver grade signals that this is more than a token task. The state has more strands than eight by the starter's notes, so you can choose the ones that suit your route, but every strand you pick must be played through to its own final mission. Track which strands you have closed in the pause menu before moving on to the next.",
+   "hint": "Eight stranger strands, each finished to its last mission.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~4-8 hours (estimate)",
+   "phase": "p7",
+   "missable": "Not expected to be missable, because the requirement is a count over available strands rather than a specific set. Whether a partially completed strand still counts toward the eight once abandoned mid-strand is not verified; the safe plan is to finish what you start."
   },
   {
    "id": 26,
    "name": "Supply & Demand",
    "description": "Complete the final mission for Randy.",
    "grade": "bronze",
-   "guide": "Finish Randy's last mission."
+   "guide": "Randy's strand ends with a final mission that unlocks this trophy. Play Randy's missions through in order until the last one is available, then complete it. As with the other strangers, the strand counts toward 100% completion, so the time is never wasted even beyond the trophy itself.",
+   "hint": "Randy's strand, played in order to the end.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~1-2 hours for the strand (estimate)",
+   "phase": "p5",
+   "missable": "Not expected to be missable. The strand's length and difficulty are estimates; its final mission is the only trigger named in the description."
   },
   {
    "id": 27,
    "name": "Spin On This!",
    "description": "Complete the final mission for Tyrone.",
    "grade": "bronze",
-   "guide": "Finish Tyrone's last mission."
+   "guide": "Tyrone's strand finishes with a final mission; complete it for the trophy. Follow Tyrone's missions from their starting point through to the strand's close, in order. Finish this alongside the other strands during your mid-game free-roam blocks so the eight-strand total required for the silver comes together naturally.",
+   "hint": "Tyrone's strand, played in order to the end.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~1-2 hours for the strand (estimate)",
+   "phase": "p5",
+   "missable": "Not expected to be missable. As with the other strand trophies, ordering inside the strand is assumed, not verified; play the missions as the game presents them and the final one will arrive."
   },
   {
    "id": 28,
    "name": "Positive Mental Attitude",
    "description": "Meditate at every spot across Leonida.",
    "grade": "bronze",
-   "guide": "Meditate at all 18 spots."
+   "guide": "Meditate at every spot across Leonida; the starter's notes count 18. Meditation spots are usually marked on the map once discovered, so sweep the map region by region and use each marker you find. Because this is completion-list content, cross-check the in-game tracker rather than trusting memory for the last few spots, which are almost always the ones you skipped.",
+   "hint": "18 meditation spots; sweep the map and use each one.",
+   "tags": [
+    "collectible"
+   ],
+   "difficulty": 2,
+   "time": "~2-3 hours (estimate)",
+   "phase": "p7",
+   "missable": "Not expected to be missable, since the spots are part of the world's completion content. Whether a missed spot can still be visited after the story is presumably yes and is exactly the kind of assumption this guide flags as unverified."
   },
   {
    "id": 29,
    "name": "Fair Game",
    "description": "Hunt a unique animal for Bret.",
    "grade": "bronze",
-   "guide": "Hunt the unique animal for Bret."
+   "guide": "Hunt the unique animal that Bret asks for. Take Bret's hunting strand until the unique animal hunt becomes available, then complete the hunt by its rules; the animal presumably must be taken cleanly, though the exact rules are not verified from the description. The strand itself also progresses your stranger mission count, so the effort is shared.",
+   "hint": "Bret's strand leads to one special hunt.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~1-2 hours (estimate)",
+   "phase": "p5",
+   "missable": "Possibly missable in the sense that a unique animal hunt could have a window or a clean-kill condition that fails permanently; that is a conservative assumption, not a verified fact. Attempt the hunt with patience and save beforehand if the game allows it."
   },
   {
    "id": 30,
    "name": "Don't Touch My Deck",
    "description": "Complete 3 Collectible Card sets.",
    "grade": "silver",
-   "guide": "Complete 3 collectible card sets (silver)."
+   "guide": "Three collectible card sets must be completed. Card sets are the classic collection loop: gather the cards scattered across the world until one full set, then three, are finished. Since sets are finite, a missing card is recoverable only by finding it, so keep a checklist and sweep areas methodically rather than at random.",
+   "hint": "Find every card needed to close three full sets.",
+   "tags": [
+    "collectible"
+   ],
+   "difficulty": 3,
+   "time": "~3-5 hours (estimate)",
+   "phase": "p7",
+   "missable": "Not expected to be missable, since collectibles remain in the world; the honest caveat is that the number of cards per set and the total number of sets are not verified. Three completed sets out of however many exist is the stated bar."
   },
   {
    "id": 31,
    "name": "You WAiNKer!",
    "description": "WAiNK It at 100 locations.",
    "grade": "silver",
-   "guide": "WAiNK It at 100 locations (silver)."
+   "guide": "WAiNK It at 100 locations, which is a long-haul traversal trophy with a silver grade. The starter's notes give the location count, so use the in-game tracker to watch your total climb and plan routes through dense areas. The last handful is usually the slowest, so save a session for the far corners of the map you never otherwise visit.",
+   "hint": "100 WAiNK locations; route through dense areas and cover the edges last.",
+   "tags": [
+    "collectible"
+   ],
+   "difficulty": 3,
+   "time": "~4-6 hours (estimate)",
+   "phase": "p7",
+   "missable": "Not expected to be missable, since the locations are fixed world content. The exact trigger of a WAiNK location, meaning where you must stand or what you must do there, is not verified; follow the in-game prompts."
   },
   {
    "id": 32,
    "name": "One Last Thing",
    "description": "Complete 50 Challenges.",
    "grade": "bronze",
-   "guide": "Finish 50 challenges."
+   "guide": "Fifty challenges must be completed. Challenges are the game's scattered side objectives, so sample every type you encounter and finish the ones that suit your build and vehicle. Fifty is a volume target rather than a skill wall: a handful per session across the platinum campaign reaches it comfortably.",
+   "hint": "A volume target; finish small challenges steadily.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~3-5 hours (estimate)",
+   "phase": "p6",
+   "missable": "Not expected to be missable. What counts as a challenge and whether failed attempts reset progress are not verified; treat any completed attempt as a tick in your favor."
   },
   {
    "id": 33,
    "name": "Hot Together",
    "description": "Lose a 4 star Wanted Level with your partner and escape the heat.",
    "grade": "bronze",
-   "guide": "Lose a 4-star wanted level with your partner."
+   "guide": "Lose a four-star wanted level with your partner and escape the heat, which is a staged chaos exercise rather than a milestone. Raise your wanted level deliberately in a partner-enabled stretch of the game, then run the escape with your partner active until the wanted level clears. Pick an escape route with cover and a getaway vehicle planned in advance, because four stars is high enough that improvisation gets messy fast.",
+   "hint": "Escalate to four stars with your partner active, then shake the police.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~30-60 minutes including setup (estimate)",
+   "phase": "p4",
+   "missable": "Not expected to be missable, assuming the wanted system works throughout free-roam. Whether the partner must survive to the very end of the escape is not verified; keep them alive regardless, since that is the natural reading."
   },
   {
    "id": 34,
    "name": "Retail Therapy",
    "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
    "grade": "bronze",
-   "guide": "Rob 3 shops in a row with your partner, keeping your wanted level."
+   "guide": "Rob three shops back-to-back with your partner without losing your wanted level. Choose three shops close together, trigger the robberies in sequence, and keep the wanted level alive between them, because the constraint is that it must not be lost mid-run. Plan the getaway for immediately after the third shop so the streak and your escape line up instead of fighting each other.",
+   "hint": "Three shops in a row, wanted level never cleared in between.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~30-60 minutes (estimate)",
+   "phase": "p4",
+   "missable": "Not expected to be missable, since shop robberies are presumably repeatable. Whether the wanted level must still be active at the exact moment the third robbery completes is not verified; the safe play is to keep it hot continuously until all three are done."
   },
   {
    "id": 35,
    "name": "Whip It Good",
    "description": "Discover 100 vehicles.",
    "grade": "bronze",
-   "guide": "Discover 100 vehicles."
+   "guide": "Discover 100 vehicles. Discovery presumably happens by driving, riding in or at least closely encountering each model, so vary everything you steal and drive across the campaign. Check the in-game vehicle list progress periodically; common models come quickly and the long tail of rare vehicles is where the real effort goes.",
+   "hint": "Drive and steal widely; the in-game list shows your discovery count.",
+   "tags": [
+    "collectible"
+   ],
+   "difficulty": 3,
+   "time": "~3-6 hours across the campaign (estimate)",
+   "phase": "p7",
+   "missable": "Not expected to be missable, since vehicle spawns persist in the world. Whether riding as a passenger counts as a discovery is not verified, so prefer taking the wheel yourself when a rare model appears."
   },
   {
    "id": 36,
    "name": "Gunslinger",
    "description": "Take down 5 enemies in a single use of Combat Focus.",
    "grade": "bronze",
-   "guide": "Down 5 enemies in one Combat Focus."
+   "guide": "Take down five enemies in a single use of Combat Focus. Combat Focus is the game's slow-motion ability, so build toward a moment where five or more enemies are clustered, activate it, and drop them before the meter drains. A busy firefight in a story mission replay or a gang clash is the natural setting; reload beforehand and pick your moment rather than forcing it.",
+   "hint": "Cluster five enemies, then slow time and clear them all in one activation.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~30-60 minutes of attempts (estimate)",
+   "phase": "p4",
+   "missable": "Not expected to be missable, since Combat Focus presumably recharges and firefights recur. Whether the five takedowns must be kills or just downings is not verified; aim for definitive takedowns to satisfy either reading."
   },
   {
    "id": 37,
    "name": "Catch Me If You Can",
    "description": "Make an unscheduled departure at VCIA.",
    "grade": "bronze",
-   "guide": "Leave VCIA in an unscheduled way."
+   "guide": "Make an unscheduled departure at VCIA, the airport. The wording points to leaving the airport by a means the schedule does not offer, and the exact method is not verified, so expect to experiment with vehicles and access points around the airport perimeter. Treat this as a free-roam stunt rather than a mission objective, and save before serious attempts so a failed experiment costs you nothing.",
+   "hint": "Get out of the airport in a way no timetable would approve.",
+   "tags": [
+    "missable"
+   ],
+   "difficulty": 3,
+   "time": "~30-60 minutes of experimentation (estimate)",
+   "phase": "p4",
+   "missable": "Tagged missable as a conservative default: if the departure method depends on an event, vehicle or access that only exists under certain conditions, the opportunity could pass. Nothing in the official description confirms either direction, so this tag means plan for it early rather than assume it waits."
   },
   {
    "id": 38,
    "name": "Challenging Tank",
    "description": "Kinda hot in these Rhinos.",
    "grade": "bronze",
-   "guide": "Deal with Rhinos (tanks)."
+   "guide": "The description is a nod to being stuck in a Rhino, the tank, so the trophy almost certainly involves getting into or otherwise dealing with one. Tanks are usually acquired through military installations or staged events, and neither route is verified here, so check the in-game help and world markers for how Rhinos appear. Once you are in or up against one, the trophy's trigger should follow the description's scenario directly.",
+   "hint": "Find a Rhino tank; the description's joke tells you the scenario.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~30-90 minutes (estimate)",
+   "phase": "p4",
+   "missable": "Possibly missable if tank access depends on a location or event that is not always present; that is an unverified possibility rather than a claim. Hunt for the Rhino during free-roam with the airport and military areas as first guesses, and treat any found access as worth saving before use."
   },
   {
    "id": 39,
    "name": "Sneakthief",
    "description": "Rob a jewelry store without being detected.",
    "grade": "bronze",
-   "guide": "Rob a jewelry store without being seen."
+   "guide": "Rob a jewelry store without being detected. Study the store's guards and camera layout before acting, take a slow approach, and use the stealth tools the game offers to stay unseen through the whole robbery. If a plan collapses, restart the attempt rather than pushing a detected run to completion, since a detected robbery earns money but not the trophy.",
+   "hint": "A clean, unseen jewelry robbery from entry to exit.",
+   "tags": [
+    "missable"
+   ],
+   "difficulty": 3,
+   "time": "~30-60 minutes (estimate)",
+   "phase": "p4",
+   "missable": "Tagged missable as a conservative default: if the jewelry robbery is a one-time scripted opportunity rather than a repeatable activity, an unseen run failed today might not be reattemptable tomorrow. The description does not say whether it repeats, so treat the first solid chance as the one to take seriously."
   },
   {
    "id": 40,
    "name": "Maximum Withdrawal",
    "description": "Rob 5 Bank Vaults and escape.",
    "grade": "silver",
-   "guide": "Rob 5 bank vaults and escape (silver)."
+   "guide": "Rob five bank vaults and escape each time, a silver trophy that is a volume version of the heist loop. Bank vault robberies are presumably repeatable activities, though their exact availability is not verified, so look for vault opportunities in the world and in the crime activity lists. The escape is part of each count by the wording, so do not consider a robbery done until you are clear of the heat.",
+   "hint": "Five vault robberies, five clean escapes.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~2-4 hours (estimate)",
+   "phase": "p4",
+   "missable": "Not expected to be missable, assuming vault robberies repeat; that assumption is flagged because the description does not confirm it. If vaults turn out to be limited events, treat this trophy as one to plan around rather than grind."
   },
   {
    "id": 41,
    "name": "A Classic Blitz Play",
    "description": "Rob an Armored Truck and escape.",
    "grade": "bronze",
-   "guide": "Rob an armored truck and escape."
+   "guide": "Rob an armored truck and escape. Armored trucks move on routes, so intercept one, take the heist opportunity it presents, and get out clean. Because the escape is explicitly part of the trophy, plan the getaway vehicle before the ambush rather than improvising one with the alarm already ringing.",
+   "hint": "Intercept an armored truck on its route and escape clean.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~30-60 minutes (estimate)",
+   "phase": "p4",
+   "missable": "Not expected to be missable, since armored trucks presumably keep patrolling. If interception difficulty scales with equipment you own, do this after arming up rather than during the early story."
   },
   {
    "id": 42,
    "name": "The Goodtime State",
    "description": "Explore all of Leonida.",
    "grade": "bronze",
-   "guide": "Explore all 52 areas of Leonida."
+   "guide": "Explore all of Leonida; the starter's notes count 52 areas. Exploration trophies usually unlock per area as you set foot in them, so sweep the map edge to edge, including the towns, trails and waterways that are easy to skip. Keep an eye on the map's coverage indicators and tick off regions you have covered so the last few areas are a targeted drive, not a blind search.",
+   "hint": "52 areas; sweep the map edges and water first.",
+   "tags": [
+    "collectible"
+   ],
+   "difficulty": 3,
+   "time": "~3-5 hours (estimate)",
+   "phase": "p7",
+   "missable": "Not expected to be missable, since the world is always explorable. The 52-area count comes from the starter's notes and is not independently verified; the in-game map's own coverage display is the authority."
   },
   {
    "id": 43,
    "name": "Pest Control",
    "description": "Rob an Illegal Operation belonging to each gang.",
    "grade": "bronze",
-   "guide": "Rob one illegal operation of each of the 9 gangs."
+   "guide": "Rob an illegal operation belonging to each gang; the starter's notes count nine gangs. Illegal operations are presumably marked or discoverable in gang territories, so rotate through each gang's area and rob one of their operations. Because the trophy cares about variety rather than volume, one robbery per gang is enough, which makes route planning worth more than grind here.",
+   "hint": "One robbery per gang, nine gangs in total.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "~2-3 hours (estimate)",
+   "phase": "p4",
+   "missable": "Not expected to be missable, assuming gang operations persist in their territories. Whether a single operation can belong to more than one gang for the count is not verified; spreading the robberies across all nine areas settles it regardless."
   },
   {
    "id": 44,
    "name": "In The Beginning…",
    "description": "Enjoy a cocktail with a view on Ocean Beach.",
    "grade": "bronze",
-   "guide": "Have a cocktail with a view on Ocean Beach."
+   "guide": "Enjoy a cocktail with a view on Ocean Beach. Find a bar or venue on Ocean Beach, order a cocktail, and stay for the scene while positioned with the view the description implies. This is a low-effort moment trophy; the only uncertainty is which venue qualifies, so try the most obvious beachfront spot first before hunting alternatives.",
+   "hint": "A cocktail at an Ocean Beach venue with the water in view.",
+   "tags": [
+    "missable"
+   ],
+   "difficulty": 1,
+   "time": "~10-20 minutes (estimate)",
+   "phase": "p7",
+   "missable": "Tagged missable as a conservative default: if the qualifying venue or the cocktail interaction is tied to a scripted moment or a venue state that changes, the chance could pass. No venue is named in the official description, so this tag means try it early rather than assume the beach waits forever."
   },
   {
    "id": 45,
    "name": "Capital Offense",
    "description": "Smash your way out of a vehicle showroom in classic style.",
    "grade": "bronze",
-   "guide": "Smash out of a vehicle showroom in style."
+   "guide": "Smash your way out of a vehicle showroom in classic style. Drive a vehicle through the showroom's glass and out onto the street, which is the classic the wording gestures at. Any showroom you can enter with a car should work; the exact trigger is not verified, so a dramatic full-speed exit through the front glass is the safe interpretation.",
+   "hint": "Drive a car through a showroom's glass to the street.",
+   "tags": [
+    "missable"
+   ],
+   "difficulty": 2,
+   "time": "~10-30 minutes (estimate)",
+   "phase": "p7",
+   "missable": "Tagged missable as a conservative default: if showrooms only open, or only let vehicles in, under certain story or economy states, the stunt's window could close. Nothing confirms that, so the tag means attempt it when you first have a fast car rather than banking on it late."
   },
   {
    "id": 46,
    "name": "Let’s Go Bowling",
    "description": "Follow-through at the Kolt & Associates' bowling alley.",
    "grade": "bronze",
-   "guide": "Play bowling at the Kolt & Associates alley."
+   "guide": "Follow through at the Kolt & Associates' bowling alley. The wording suggests completing a bowling action with a proper follow-through, so play the bowling activity at that alley and finish a throw properly. If a whole game is required, it is a short one; the exact trigger, whether one throw or one game, is not verified.",
+   "hint": "Bowl at the Kolt & Associates alley and finish a proper throw.",
+   "tags": [
+    "missable"
+   ],
+   "difficulty": 1,
+   "time": "~15-30 minutes (estimate)",
+   "phase": "p7",
+   "missable": "Tagged missable as a conservative default: a named venue's activity could in principle be tied to a story window, though nothing in the description says so. The tag means visit the alley during your free-roam passes rather than leaving it as a maybe."
   },
   {
    "id": 47,
    "name": "Personal Best",
    "description": "A partnership with mass appeal.",
    "grade": "bronze",
-   "guide": "A partnership moment with mass appeal."
+   "guide": "The official description, a partnership with mass appeal, is deliberately vague, so treat this as a scene or moment trophy involving the two protagonists together. Play partner-enabled content and watch for a moment the game frames as notable; the exact trigger is not verified and honest guides should say so. Keep this trophy on your watch list during the partner-focused trophies such as Retail Therapy, since the trigger probably lives in the same content.",
+   "hint": "Something notable done together as a pair; watch partner content.",
+   "tags": [
+    "missable"
+   ],
+   "difficulty": 2,
+   "time": "unknown (estimate: alongside partner trophies)",
+   "phase": "p7",
+   "missable": "Tagged missable because the trigger is genuinely unverified and could be a one-time scene. If it is a scene, missing it would mean a replay or reload; if it is a repeatable activity moment, it is safe. Until one of those is confirmed, treat it as time-sensitive."
   },
   {
    "id": 48,
    "name": "Actions Speak Louder",
    "description": "Choices made (for better or worse).",
    "grade": "bronze",
-   "guide": "Make choices (PSN tracks a count to 500)."
+   "guide": "Choices made, for better or worse, with the starter's notes tracking a count to 500. The game presumably counts story and dialogue choices cumulatively across the playthrough, so simply playing the whole game with its decision points engaged should approach the number. Do not grind this deliberately; let the campaign's choices accumulate and check the tracker late in the run, then sweep whatever repeatable choice points remain.",
+   "hint": "A running count of choices; play naturally and check the total late.",
+   "tags": [],
+   "difficulty": 3,
+   "time": "accumulates over the whole game (estimate)",
+   "phase": "p7",
+   "missable": "Not expected to be missable, since the count accumulates by design. Whether choices made before the tracker existed retroactively count is the kind of detail no description answers; starting the count early in the playthrough removes the question."
   },
   {
    "id": 49,
    "name": "Bad Luck, I Guess",
    "description": "Second time's the charm.",
    "grade": "bronze",
-   "guide": "Succeed on a second try."
+   "guide": "Second time's the charm: succeed on a second try. The natural read is to fail something once and then succeed at it on the next attempt, though the exact scope, meaning which activities qualify, is not verified. Story mission retries are the obvious candidate, so wipe once in a mission you intended to beat anyway and then finish it on the retry.",
+   "hint": "Fail once, then succeed immediately after.",
+   "tags": [
+    "missable"
+   ],
+   "difficulty": 1,
+   "time": "happens naturally during attempts (estimate)",
+   "phase": "p5",
+   "missable": "Tagged missable only because the qualifying scope is unverified; if the second try must immediately follow the failure within some window, a lucky first-try player could go a long time without a qualifying pair. In practice any failed attempt followed by a success should settle it."
   },
   {
    "id": 50,
    "name": "The Truth Is Out There",
    "description": "What the hell just happened?",
    "grade": "bronze",
-   "guide": "Witness something strange."
+   "guide": "What the hell just happened? The description implies a strange scripted moment somewhere in the state of Leonida, and the trigger is deliberately mysterious. Keep this trophy in mind during odd encounters and stranger strands, which are the classic home for series weirdness, and treat any surreal scene you trigger as a candidate. Completing the stranger strands is the most sensible sweep for it, since their finales are where the strange lives.",
+   "hint": "A strange scene somewhere in Leonida; the stranger strands are the likely home.",
+   "tags": [
+    "missable"
+   ],
+   "difficulty": 2,
+   "time": "unknown (estimate: during strands)",
+   "phase": "p5",
+   "missable": "Tagged missable because a scripted strange moment is exactly the kind of trigger that can pass unexperienced. The description names nothing specific, so this tag means stay alert during odd content rather than assume the moment repeats on demand."
   },
   {
    "id": 51,
    "name": "Ten Pin",
    "description": "Bowl 'em over with a melee drive-by.",
    "grade": "bronze",
-   "guide": "Knock someone down with a melee drive-by."
+   "guide": "Bowl 'em over with a melee drive-by. Drive past a target and land a melee strike from the moving vehicle, ideally near a bowling-themed setting if the pun is literal, though the exact requirement beyond the melee drive-by itself is not verified. Practice the timing on quiet streets first, then take the attempt when the swing feels natural rather than mowing down half a block hoping for physics.",
+   "hint": "A melee strike from a moving vehicle; bowling pins optional.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~15-30 minutes (estimate)",
+   "phase": "p4",
+   "missable": "Not expected to be missable, since melee drive-bys are presumably always available in free-roam. Whether the strike must connect with a person or can hit an object is not verified; a clean hit on a pedestrian target satisfies the plain reading."
   },
   {
    "id": 52,
    "name": "Dime on the Dollar",
    "description": "Earn $250,000 laundering Marked Bills through your contacts.",
    "grade": "bronze",
-   "guide": "Launder $250,000 of marked bills."
+   "guide": "Launder $250,000 of marked bills through your contacts. Marked bills presumably come from robberies and illegal operations, so route your crime income through the laundering loop until the running total crosses the threshold. The count is cumulative by the wording, so there is no need for a single large laundering session; steady laundering after each job does the work invisibly.",
+   "hint": "Route your marked-bill income through laundering until 250k is cleaned.",
+   "tags": [],
+   "difficulty": 2,
+   "time": "~1-3 hours across the campaign (estimate)",
+   "phase": "p4",
+   "missable": "Not expected to be missable, since laundering is presumably a repeatable loop. Whether the $250,000 counts bills laundered or profit received is not verified; the safest habit is to keep laundering everything you take rather than hoarding marked cash."
   },
   {
    "id": 53,
    "name": "Treat Yo Self",
    "description": "Spend $100,000 across all shops.",
    "grade": "bronze",
-   "guide": "Spend $100,000 in shops."
+   "guide": "Spend $100,000 across all shops. Buy clothes, weapons, vehicles, food and anything else the shops sell; the wording says across all shops, which may mean shops of every type or simply the aggregate total, and the exact reading is not verified. Either way, regular shopping across the campaign reaches the number naturally, so buy what you need when you need it and the total takes care of itself.",
+   "hint": "Buy widely across the shop types until 100k is spent.",
+   "tags": [],
+   "difficulty": 1,
+   "time": "~1-2 hours across the campaign (estimate)",
+   "phase": "p4",
+   "missable": "Not expected to be missable, since shops persist and money is renewable. The ambiguity between every shop type and any shops is flagged honestly here; splitting purchases across categories satisfies both readings."
   },
   {
    "id": 54,
    "name": "Little Boxes",
    "description": "Purchase all garage properties.",
    "grade": "bronze",
-   "guide": "Buy all 8 garage properties."
+   "guide": "Purchase all garage properties; the starter's notes count 8. Garages cost real money, so either save across the campaign or fund them with laundered income from the marked-bills loop in the street crime phase. Buy them as you unlock each district so the purchase spread stays even, and keep the in-game property list as your checklist rather than trusting memory.",
+   "hint": "All 8 garages; fund them with the laundering loop.",
+   "tags": [
+    "collectible"
+   ],
+   "difficulty": 2,
+   "time": "~2-4 hours including earning the cash (estimate)",
+   "phase": "p7",
+   "missable": "Not expected to be missable, since property purchases persist once made. The 8-garage count comes from the starter's notes and is not independently verified; the in-game property menu is the authority on what remains."
   },
   {
    "id": 55,
    "name": "On the Spot",
    "description": "Register 10 vehicles to the Scooter Bros app.",
    "grade": "bronze",
-   "guide": "Register 10 vehicles in the Scooter Bros app."
+   "guide": "Register 10 vehicles to the Scooter Bros app. Open the app and register vehicles you have access to; ten registrations is a short task once you know where the app lives on the phone. Any ten vehicles should do by the wording, so use whatever you are driving across a free-roam session and let the app's own counter confirm the total.",
+   "hint": "Register any 10 vehicles in the Scooter Bros phone app.",
+   "tags": [],
+   "difficulty": 1,
+   "time": "~15-30 minutes (estimate)",
+   "phase": "p7",
+   "missable": "Not expected to be missable, since the app is part of the phone's permanent toolset. Whether a vehicle must be owned or merely driven to register is not verified; registering whatever you are currently driving satisfies the plain wording either way."
   }
  ]
 }
