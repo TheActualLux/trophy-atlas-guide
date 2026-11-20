@@ -1,90 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<title>Trophy Atlas — GTA VI Platinum Guide (PS5)</title>
-<link rel="stylesheet" href="style.css">
+<title>Trophy Atlas — GTA VI Trophy Guide</title>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="masthead">
-    <div>
-      <p class="kicker">Grand Theft Auto VI · PlayStation 5</p>
-      <h1>Trophy Atlas</h1>
-      <p class="tagline">A platinum roadmap and field guide for all 55 official trophies.</p>
-    </div>
-    <div class="scoreboard" aria-label="Progress summary">
-      <p class="progress-line"><span id="progress-count">0</span> of <span id="progress-total">55</span> earned</p>
-      <p class="platinum-line"><span id="progress-percent">0%</span> <span class="muted">to platinum</span></p>
-      <div class="bar" id="progress-bar" role="img" aria-label="Grade-segmented trophy progress">
-        <span class="seg seg-platinum" data-grade="platinum"><span class="fill"></span></span>
-        <span class="seg seg-gold" data-grade="gold"><span class="fill"></span></span>
-        <span class="seg seg-silver" data-grade="silver"><span class="fill"></span></span>
-        <span class="seg seg-bronze" data-grade="bronze"><span class="fill"></span></span>
-      </div>
-      <p id="progress-status" class="visually-hidden" role="status" aria-live="polite"></p>
-    </div>
+<header class="topbar">
+  <a class="brand" href="#route">Trophy Atlas</a>
+  <span class="platform">GTA VI · PS5 Platinum</span>
+  <div class="top-progress">
+    <span class="earned" id="earned">0/55 earned</span>
+    <span class="segments" id="segments" title="Progress by grade"></span>
+    <span class="hours" id="hours-left">≈ — h remaining</span>
+  </div>
+  <nav class="tabs" id="tabs">
+    <a href="#route" id="tab-route">Route</a>
+    <a href="#trophies" id="tab-trophies">Trophies</a>
+  </nav>
+  <div class="top-actions">
+    <label class="switch" title="Reveal spoiler-free hints (s)">
+      <input type="checkbox" id="spoilers">
+      <span>Spoilers</span>
+    </label>
+    <button type="button" id="export-btn" title="Export progress as JSON">Export</button>
+    <button type="button" id="import-btn" title="Import progress JSON">Import</button>
+    <button type="button" id="reset-btn" title="Clear all ticks">Reset</button>
+    <input type="file" id="import-file" accept="application/json,.json" hidden>
   </div>
 </header>
-
-<nav class="controls" aria-label="Trophy filters and tools">
-  <div class="search-wrap">
-    <label class="visually-hidden" for="search">Search trophies</label>
-    <input id="search" type="search" placeholder="Search trophies…  ( / )" autocomplete="off" spellcheck="false">
-  </div>
-  <label class="control">Grade
-    <select id="grade">
-      <option value="all">All grades</option>
-      <option value="platinum">Platinum</option>
-      <option value="gold">Gold</option>
-      <option value="silver">Silver</option>
-      <option value="bronze">Bronze</option>
-    </select>
-  </label>
-  <fieldset class="control tags" id="tag-filters">
-    <legend class="visually-hidden">Tag filters</legend>
-    <button type="button" class="tagbtn" data-tag="missable" aria-pressed="false">Missable</button>
-    <button type="button" class="tagbtn" data-tag="collectible" aria-pressed="false">Collectible</button>
-    <button type="button" class="tagbtn" data-tag="story-critical" aria-pressed="false">Story-critical</button>
-  </fieldset>
-  <label class="control">Sort
-    <select id="sort">
-      <option value="id">ID</option>
-      <option value="grade">Grade</option>
-      <option value="name">Name</option>
-    </select>
-  </label>
-  <button type="button" id="spoilers" aria-pressed="true">Spoilers hidden <kbd>s</kbd></button>
-  <div class="tools">
-    <button type="button" id="export">Export progress</button>
-    <label class="control import-label">Import
-      <input id="import" type="file" accept="application/json,.json">
-    </label>
-    <button type="button" id="reset">Reset</button>
-  </div>
-  <p id="status" class="status" role="alert"></p>
-</nav>
-
-<main>
-  <section class="roadmap" aria-labelledby="roadmap-heading">
-    <h2 id="roadmap-heading">Platinum roadmap</h2>
-    <p class="roadmap-note">Phases are an authored, unverified plan built only from the official trophy list; every time below is an estimate, not a measured figure. Trophy chips jump to their entry.</p>
-    <ol id="phases" class="phase-list"></ol>
-  </section>
-
-  <section class="list" aria-labelledby="list-heading">
-    <h2 id="list-heading">All trophies</h2>
-    <p id="empty" class="empty" hidden>No trophies match the current filters.</p>
-    <ol id="rows" class="trophy-list"></ol>
-  </section>
-
-  <footer class="site-footer">
-    <p>Progress is saved in this browser's localStorage. Export produces a JSON file you can import on another browser. Guide copy, difficulty ratings and time estimates are authored for this guide from the official trophy list; game specifics beyond that list are framed as estimates, not verified facts.</p>
-  </footer>
-</main>
-
-<script type="module" src="app.js"></script>
+<main id="app"></main>
+<div id="status" class="status" role="status" aria-live="polite"></div>
+<noscript><p class="noscript">This atlas needs JavaScript to render its route and dossier.</p></noscript>
+<script type="module" src="./app.js"></script>
 </body>
 </html>

@@ -1,118 +1,150 @@
-// gta6-trophy-guide-01 entry (Node 22+, standard library only).
-//
-// Trophy Atlas: a static single-page GTA VI platinum guide in app/ (ES modules, CSS,
-// no build step, no network beyond its own trophies.json). This program hands it in:
-// it copies app/ and screenshots/ beside this file to the output directory and writes
-// dossier.json via the vendored make.fun library, whose byte output the scorer
-// reproduces. Leave vendor/makefun-frontend.ts untouched.
-//
-// Preflight runs BEFORE any copy or output side effect:
-//   - app/data/trophies.json must parse as JSON;
-//   - every trophy record must carry id/name/grade/guide (guide at least 3 sentences);
-//   - screenshots/ holds at most 4 images (JPEG/PNG), each at most 262144 bytes.
-// Serve locally with `node serve.ts [--port n]`.
-// Outside the grader's container:  MAKEFUN_OUTPUT_DIR=out node main.ts
+// Trophy Atlas packager. Reads the trophy data, refuses anything malformed, then copies
+// app/ and screenshots/ into the output directory and writes a dossier.json summary.
+// Node built-ins only; run with: MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { cpSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
+import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildDossier } from './vendor/makefun-frontend.ts';
 
-const here = fileURLToPath(new URL('.', import.meta.url));
-const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
-
-const GRADES = ['platinum', 'gold', 'silver', 'bronze'];
-const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png']);
+const ROOT = dirname(fileURLToPath(new URL(import.meta.url)));
+const DATA_FILE = join(ROOT, 'app', 'data', 'trophies.json');
+const SCREENSHOTS_DIR = join(ROOT, 'screenshots');
 const MAX_SCREENSHOTS = 4;
-const MAX_SCREENSHOT_BYTES = 262144; // 256 KiB
-const MIN_GUIDE_SENTENCES = 3;
+const MAX_SCREENSHOT_BYTES = 262144;
+const GRADES = ['platinum', 'gold', 'silver', 'bronze'] as const;
 
-function fail(message) {
-  console.error(`preflight: ${message}`);
+type Grade = (typeof GRADES)[number];
+
+interface Trophy {
+  id: number;
+  name: string;
+  description: string;
+  grade: string;
+  guide: string;
+  steps: string[];
+  hint: string;
+  verification: string;
+  hours: number;
+  [key: string]: unknown;
+}
+
+interface TrophyData {
+  game: string;
+  platform: string;
+  phases: Array<{ id: string; name: string; goal?: string; about?: string; trophies: number[] }>;
+  trophies: Trophy[];
+}
+
+interface Screenshot {
+  file: string;
+  bytes: number;
+}
+
+function fail(message: string): never {
+  console.error('refusing to package: ' + message);
   process.exit(1);
 }
 
-function countSentences(text) {
-  return text.split(/[.!?]+(?:\s|$)/).filter((s) => s.trim().length > 0).length;
+function countSentences(text: string): number {
+  return (text.replace(/\.\.\./g, '…').match(/[.!?…](\s|$)/g) ?? []).length;
 }
 
-function preflight() {
-  // 1. The trophy data must parse and satisfy the guide's schema.
-  const dataPath = join(here, 'app', 'data', 'trophies.json');
-  let doc;
+// Reads and fully validates the trophy data before anything is copied anywhere.
+function readTrophies(): TrophyData {
+  let raw: string;
   try {
-    doc = JSON.parse(readFileSync(dataPath, 'utf8'));
+    raw = readFileSync(DATA_FILE, 'utf8');
   } catch (err) {
-    fail(`app/data/trophies.json is not valid JSON (${err.message})`);
+    fail('cannot read ' + DATA_FILE + ' (' + (err as Error).message + ')');
   }
-  if (doc === null || typeof doc !== 'object' || Array.isArray(doc)) fail('app/data/trophies.json: not a JSON object');
-  if (!Array.isArray(doc.trophies)) fail('app/data/trophies.json: missing "trophies" array');
-  if (doc.trophies.length === 0) fail('app/data/trophies.json: "trophies" is empty');
-  const seen = new Set();
-  const counts = { platinum: 0, gold: 0, silver: 0, bronze: 0 };
-  for (const t of doc.trophies) {
-    if (t === null || typeof t !== 'object' || Array.isArray(t)) fail('app/data/trophies.json: a trophy record is not an object');
-    for (const key of ['id', 'name', 'grade', 'guide']) {
-      if (!(key in t)) fail(`app/data/trophies.json: trophy record missing "${key}"`);
+  let data: TrophyData;
+  try {
+    data = JSON.parse(raw) as TrophyData;
+  } catch (err) {
+    fail('invalid JSON in trophies.json (' + (err as Error).message + ')');
+  }
+  if (!data || typeof data !== 'object' || !Array.isArray(data.trophies)) {
+    fail('trophies.json has no trophies array');
+  }
+  const ids = new Set<number>();
+  for (const t of data.trophies) {
+    const label = 'trophy ' + (typeof t.id === 'number' ? 't' + t.id : JSON.stringify(t.id ?? t));
+    if (!Number.isInteger(t.id) || (t.id as number) < 1) fail(label + ': missing or invalid id');
+    if (ids.has(t.id)) fail(label + ': duplicate id');
+    ids.add(t.id);
+    if (typeof t.name !== 'string' || !t.name.trim()) fail(label + ': missing name');
+    if (typeof t.description !== 'string' || !t.description.trim()) fail(label + ': missing description');
+    if (typeof t.grade !== 'string' || !(GRADES as readonly string[]).includes(t.grade)) {
+      fail(label + ': missing or unknown grade ' + JSON.stringify(t.grade));
     }
-    if (!Number.isInteger(t.id) || t.id < 1) fail(`trophy: id is not a positive integer (${JSON.stringify(t.id)})`);
-    if (seen.has(t.id)) fail(`trophy ${t.id}: duplicate id`);
-    seen.add(t.id);
-    if (typeof t.name !== 'string' || t.name.trim() === '') fail(`trophy ${t.id}: "name" is not a non-empty string`);
-    if (typeof t.grade !== 'string' || !GRADES.includes(t.grade)) fail(`trophy ${t.id}: grade is not one of ${GRADES.join(', ')}`);
-    if (typeof t.guide !== 'string' || t.guide.trim() === '') fail(`trophy ${t.id}: "guide" is empty`);
-    const sentences = countSentences(t.guide);
-    if (sentences < MIN_GUIDE_SENTENCES) fail(`trophy ${t.id}: guide has ${sentences} sentence(s), fewer than the ${MIN_GUIDE_SENTENCES} the guide contract requires`);
-    counts[t.grade] += 1;
+    if (!Array.isArray(t.steps) || t.steps.length < 3 || t.steps.some((s) => typeof s !== 'string' || !s.trim())) {
+      fail(label + ': guide steps missing or fewer than 3');
+    }
+    if (typeof t.guide !== 'string' || countSentences(t.guide) < 3) {
+      fail(label + ': guide paragraph has fewer than 3 sentences');
+    }
+    if (typeof t.hint !== 'string' || !t.hint.trim()) fail(label + ': missing hint');
+    if (typeof t.verification !== 'string' || !t.verification.trim()) fail(label + ': missing verification');
+    if (typeof t.hours !== 'number' || t.hours < 0) fail(label + ': missing or invalid hours');
   }
-  return { counts, total: doc.trophies.length };
+  if (!Array.isArray(data.phases) || data.phases.length === 0) fail('trophies.json has no phases');
+  for (const p of data.phases) {
+    if (typeof p.id !== 'string' || !Array.isArray(p.trophies)) fail('phase ' + JSON.stringify(p.id) + ': missing id or trophies');
+    for (const id of p.trophies) if (!ids.has(id)) fail('phase ' + p.id + ': unknown trophy t' + id);
+  }
+  return data;
 }
 
-function preflightScreenshots() {
-  // 2. Screenshots must exist, be images, and stay under the scorer's caps —
-  //    checked (and their bytes read) before anything is copied out.
-  const dir = join(here, 'screenshots');
-  if (!existsSync(dir) || !statSync(dir).isDirectory()) fail('screenshots/: no such directory');
-  const images = [];
-  for (const name of readdirSync(dir)) {
-    const dot = name.lastIndexOf('.');
-    if (dot < 0 || !IMAGE_EXTENSIONS.has(name.slice(dot).toLowerCase())) continue;
-    const path = join(dir, name);
-    const stats = statSync(path);
-    if (!stats.isFile()) continue;
-    if (stats.size > MAX_SCREENSHOT_BYTES) {
-      fail(`screenshots/${name} is ${stats.size} bytes, over the ${MAX_SCREENSHOT_BYTES} cap`);
-    }
-    images.push({ name, bytes: readFileSync(path).length });
-    if (images.length > MAX_SCREENSHOTS) {
-      fail(`screenshots/ holds more than ${MAX_SCREENSHOTS} images`);
-    }
+// Screenshots are evidence, not product: count and size limits are enforced before copying.
+function readScreenshots(): Screenshot[] {
+  let files: string[];
+  try {
+    files = readdirSync(SCREENSHOTS_DIR).filter((f) => /\.(jpe?g|png)$/i.test(f)).sort();
+  } catch (err) {
+    fail('cannot read screenshots directory (' + (err as Error).message + ')');
   }
-  if (images.length === 0) fail('screenshots/: no PNG or JPEG image found');
-  if (images.length > MAX_SCREENSHOTS) fail(`screenshots/ holds ${images.length} images, more than the ${MAX_SCREENSHOTS} cap`);
-  return images;
+  if (files.length > MAX_SCREENSHOTS) {
+    fail('screenshots directory has ' + files.length + ' images; more than ' + MAX_SCREENSHOTS + ' is not allowed');
+  }
+  return files.map((file) => {
+    const bytes = statSync(join(SCREENSHOTS_DIR, file)).size;
+    if (bytes > MAX_SCREENSHOT_BYTES) {
+      fail(file + ' is ' + bytes + ' bytes; over the ' + MAX_SCREENSHOT_BYTES + '-byte limit');
+    }
+    return { file, bytes };
+  });
 }
 
-const { counts, total } = preflight();
-const images = preflightScreenshots();
+// The summary contract for dossier.json: grade counts, hour estimate, screenshot manifest.
+function buildDossier(data: TrophyData, screenshots: Screenshot[]) {
+  const counts: Record<Grade, number> = { platinum: 0, gold: 0, silver: 0, bronze: 0 };
+  for (const t of data.trophies) counts[t.grade as Grade]++;
+  const estimatedHours = Math.round(data.trophies.reduce((sum, t) => sum + (t.hours as number), 0) * 100) / 100;
+  return {
+    game: data.game,
+    platform: data.platform,
+    trophies: data.trophies.length,
+    phases: data.phases.length,
+    countsByGrade: counts,
+    estimatedTotalHours: estimatedHours,
+    screenshots: screenshots.map((s) => ({ file: s.file, bytes: s.bytes })),
+    generatedFrom: 'app/data/trophies.json',
+  };
+}
 
-// Side effects only after both preflights pass.
-mkdirSync(out, { recursive: true });
-cpSync(join(here, 'app'), join(out, 'app'), { recursive: true });
-mkdirSync(join(out, 'screenshots'), { recursive: true });
-cpSync(join(here, 'screenshots'), join(out, 'screenshots'), { recursive: true });
+const outputDir = resolve(ROOT, process.env.MAKEFUN_OUTPUT_DIR || 'out');
+const data = readTrophies();
+const screenshots = readScreenshots();
 
-writeFileSync(
-  join(out, 'dossier.json'),
-  buildDossier(out, {
-    text_max_bytes: 163840,
-    screenshots: { max: 4, max_bytes: 262144 },
-    app_max_files: 993,
-    app_max_bytes: 50331648,
-  }),
-);
+mkdirSync(outputDir, { recursive: true });
+cpSync(join(ROOT, 'app'), join(outputDir, 'app'), { recursive: true });
+cpSync(SCREENSHOTS_DIR, join(outputDir, 'screenshots'), { recursive: true });
 
-const dossierBytes = statSync(join(out, 'dossier.json')).size;
-console.log(`trophy counts (${total} total): platinum ${counts.platinum}, gold ${counts.gold}, silver ${counts.silver}, bronze ${counts.bronze}`);
-console.log(`screenshots found: ${images.length} (${images.map((i) => `${i.name} ${i.bytes}B`).join(', ')})`);
-console.log(`dossier.json written: ${dossierBytes} bytes`);
+const dossier = buildDossier(data, screenshots);
+writeFileSync(join(outputDir, 'dossier.json'), JSON.stringify(dossier, null, 2) + '\n', 'utf8');
+
+const gradeLine = GRADES.map((g) => g + ' ' + dossier.countsByGrade[g]).join(', ');
+console.log('packaged ' + dossier.trophies + ' trophies (' + gradeLine + ')');
+console.log('phases ' + dossier.phases + ', estimated total hours \u2248 ' + dossier.estimatedTotalHours);
+console.log('screenshots found: ' + (screenshots.length ? screenshots.map((s) => s.file).join(', ') : 'none'));
+console.log('output: ' + outputDir);

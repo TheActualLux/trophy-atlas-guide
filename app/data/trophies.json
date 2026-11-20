@@ -2,22 +2,22 @@
  "game": "Grand Theft Auto VI",
  "platform": "PlayStation 5",
  "list": "the official 55 trophies, 2026-11-18",
- "note": "Guide copy authored for this bounty from the official 55-trophy list above. Specifics beyond the supplied list (chapter contents, mission order, repeat behavior, exact counts) are unverified estimates and are framed as such in every entry.",
+ "note": "Trophy Atlas route, steps and dossier copy freshly authored for this variant around the official 55-trophy list. Hours, difficulty ratings, prerequisites and scenario interpretations are the author's own estimates; the in-game trackers are the authority on every count.",
  "phases": [
   {
    "id": "p1",
-   "name": "Opening Moves",
-   "time": "~15 minutes",
-   "about": "Get control of the game and clear the opening mission. Nothing on the list can be started before this, so it is the natural first step.",
+   "name": "Green Light",
+   "goal": "Clear the opening mission and take full control of Leonida.",
+   "about": "The route starts where the story starts. Nothing else on the list is reachable before the opening mission is done, so this short phase exists to get every player onto the same page.",
    "trophies": [
     2
    ]
   },
   {
    "id": "p2",
-   "name": "Chapters 1-3",
-   "time": "~2-3 hours (estimate)",
-   "about": "Push the main story through its first three chapters. Chapter trophies t3, t4 and t5 plus the missions t8 and t9 land here.",
+   "name": "Story Run: Chapters 1-3",
+   "goal": "Push the campaign through the first three chapters.",
+   "about": "A straight march down the main mission markers. Required missions that fall inside this stretch are collected here so the story route stays a single, uninterrupted line of work.",
    "trophies": [
     3,
     4,
@@ -28,9 +28,9 @@
   },
   {
    "id": "p3",
-   "name": "Chapters 4 & the Finale",
-   "time": "~2-4 hours (estimate)",
-   "about": "The last numbered chapter, the required missions in between, and the final mission itself. Chapter trophy t6, mission trophies t10-t13 and the gold final-mission trophy t7 come from this stretch.",
+   "name": "Story Run: Chapter 4 & Finale",
+   "goal": "Finish the last numbered chapter and the closing mission.",
+   "about": "The story ends here, and with it every mission-type trophy on the list. Keep optional work on hold; the atlas deliberately leaves the open-world sweep for after the credits.",
    "trophies": [
     6,
     7,
@@ -42,9 +42,9 @@
   },
   {
    "id": "p4",
-   "name": "Partners, Heists & Street Crime",
-   "time": "~4-6 hours (estimate)",
-   "about": "Free-roam crime work once the story tools exist: partner robberies t33 and t34, Combat Focus t36, the VCIA and Rhino oddities t37 and t38, stealth and vault robberies t39 and t40, armored trucks t41, gang operations t43, the melee drive-by t51, and the money loop t52 and t53.",
+   "name": "Street Work & Heists",
+   "goal": "Work the crime loop: robberies, heists, heat and odd stunts.",
+   "about": "With the story tools in hand, the crime economy is fully open. This phase batches every robbery, wanted-level stunt and vehicle oddity so the money and the mischief share one block of play.",
    "trophies": [
     33,
     34,
@@ -55,22 +55,22 @@
     40,
     41,
     43,
-    51,
-    52,
-    53
+    51
    ]
   },
   {
    "id": "p5",
    "name": "Stranger Strands",
-   "time": "~3-5 hours (estimate)",
-   "about": "The named stranger strands: Andy t22, Kenton t23, Billy t24, Randy t26 and Tyrone t27, Bret's hunt t29, plus the odd-moment trophies t49 and t50 that these strands tend to surface.",
+   "goal": "Close out the named stranger strands and their odd moments.",
+   "about": "Each strand is a short campaign of its own. Running them as one phase keeps the map logic coherent and feeds both the strand-count trophy and the strange-moment unlocks at the same time.",
    "trophies": [
     22,
     23,
     24,
+    25,
     26,
     27,
+    28,
     29,
     49,
     50
@@ -78,9 +78,9 @@
   },
   {
    "id": "p6",
-   "name": "Activities & Challenges",
-   "time": "~6-10 hours (estimate)",
-   "about": "The volume and skill block: stunts t15, activity sampler t16, Shooting Range golds t17, Top Fun t18, race wins t19, the fishing duel t20, arcade t21 and fifty challenges t32.",
+   "name": "Activities & Skill Checks",
+   "goal": "Clear the volume and skill trophies: stunts, races, ranges and challenges.",
+   "about": "The largest pure-playtime block. These are repeatable systems rather than one-off scenes, so they can be paced across as many sessions as the totals demand.",
    "trophies": [
     15,
     16,
@@ -94,13 +94,11 @@
   },
   {
    "id": "p7",
-   "name": "Collections, Exploration & Completion",
-   "time": "~10-15 hours (estimate)",
-   "about": "The long tail that feeds 100% completion t14: the strand count t25, meditation t28, card sets t30, WAiNK t31, vehicle discovery t35, full exploration t42, and the one-off moments t44-t48, plus property and app tasks t54 and t55.",
+   "name": "Collections, Property & Completion",
+   "goal": "Sweep the world and close the 100% completion stat.",
+   "about": "The long tail. Collections, property, one-off scenes and the completion stat itself live here, and the atlas treats them as the final audit rather than a background task.",
    "trophies": [
     14,
-    25,
-    28,
     30,
     31,
     35,
@@ -110,15 +108,17 @@
     46,
     47,
     48,
+    52,
+    53,
     54,
     55
    ]
   },
   {
    "id": "p8",
-   "name": "The Platinum",
-   "time": "at the very end",
-   "about": "Trophy t1 unlocks by itself when the other fifty-four are done. Use the checklist to find the last gaps.",
+   "name": "The Platinum Stamp",
+   "goal": "Confirm nothing is left, then collect the platinum.",
+   "about": "No work remains by design. This phase is the audit step: reconcile every counter, then let the last unlock hand over the platinum.",
    "trophies": [
     1
    ]
@@ -130,769 +130,1249 @@
    "name": "Vice Got a Price!",
    "description": "Congratulations! You're a Leonida Legend.",
    "grade": "platinum",
-   "guide": "The platinum is awarded automatically the moment your fifty-fourth other trophy unlocks, so treat it as a certificate for finishing the list rather than a task of its own. Work through the roadmap phases in order, keep the checklist honest with your own ticks, and leave no collection strand half-finished. Nothing here needs effort beyond the rest of the guide; when the last trophy pops, this one follows on the same screen.",
-   "hint": "Finish everything else first; this one cannot be earned early.",
+   "guide": "This platinum is not a task; it is the receipt for the other fifty-four. The atlas route is built so that the final item you tick is always a real trophy, and this one lands in the same notification stack seconds later. Resist the urge to hunt it directly — it cannot be earned early, traded or rushed. Keep a clean checklist through the endgame and it simply arrives.",
+   "steps": [
+    "Complete all fifty-four other trophies",
+    "Reconcile the in-game counters one last time",
+    "Accept the platinum on the final unlock"
+   ],
+   "hint": "Nothing to do here except finish everything else.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 5,
-   "time": "54 trophies' worth",
+   "hours": 0,
+   "minutes": 0,
    "phase": "p8",
-   "missable": "Cannot be missed in any real sense: it is the automatic reward for a complete list. The only way to lose it is to stop before the last trophy."
+   "requires": [],
+   "missable": "No missable risk identified: it is the automatic capstone of a complete list. The only failure mode is stopping before the fifty-fourth unlock.",
+   "verification": "Open the console trophy list and confirm every other entry shows earned before treating the route as finished."
   },
   {
    "id": 2,
    "name": "Just Like Paradise",
    "description": "Complete Gone Fishing.",
    "grade": "bronze",
-   "guide": "Gone Fishing is the opening mission, so it comes almost immediately after you take control of the game. Follow the mission markers, complete every objective it gives you, and let the closing scenes play out to the end. As an early required mission it is expected to unlock for everyone who finishes the opening, so treat it as a formality rather than a challenge.",
-   "hint": "It is the very first mission; just play the opening.",
+   "guide": "Gone Fishing sits at the front door of the campaign, so the trophy arrives minutes into a fresh save. Play its objectives in order and let the closing scenes run before you touch anything else. There is no hidden condition in the official wording. Every route to the platinum passes through here within the first sitting.",
+   "steps": [
+    "Start a new campaign",
+    "Play the opening mission through its objectives",
+    "Let the closing scene finish before stopping"
+   ],
+   "hint": "It is the very first thing the game asks of you.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 1,
-   "time": "~15 minutes",
+   "hours": 0.25,
+   "minutes": 15,
    "phase": "p1",
-   "missable": "Not expected to be missable: it is the opening mission of the story and cannot be skipped past. Repeatability is not verified, but nothing about the wording suggests a condition that can be failed permanently."
+   "requires": [],
+   "missable": "No missable risk identified: the opening mission cannot be skipped, and the unlock follows its completion directly.",
+   "verification": "The trophy notification appears at the mission-end scene; the console list records it immediately."
   },
   {
    "id": 3,
    "name": "Paradise Lost",
    "description": "Complete Chapter 1.",
    "grade": "bronze",
-   "guide": "Chapter 1 covers the first stretch of the story after the opening mission. Keep progressing the main missions until the chapter's closing scene rolls, at which point the trophy unlocks automatically. There is no stated side condition, so a straightforward playthrough of the chapter is all the evidence supports.",
-   "hint": "Just finish the first chapter's missions in order.",
+   "guide": "Chapter one ends when its last scene rolls, and that moment is the whole trophy. Keep to the main mission line and avoid abandoning a mission midway, since the conservative habit is to always complete what you start. Nothing optional is required by the description. Treat it as a free tick on the story march.",
+   "steps": [
+    "Play the chapter one missions in order",
+    "Complete the chapter closing scene",
+    "Check the unlock on the notification"
+   ],
+   "hint": "Follow the main markers; the chapter end is the trigger.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 1,
-   "time": "~1 hour (estimate)",
+   "hours": 1,
+   "minutes": 60,
    "phase": "p2",
-   "missable": "Not expected to be missable: chapter trophies follow the story by construction. Any conditions attached to individual missions inside the chapter are not verified, so play missions fully rather than quitting them early."
+   "requires": [
+    2
+   ],
+   "missable": "No missable risk identified: chapter trophies track the story itself. The only caution is not to leave a chapter mission half-done at a session break.",
+   "verification": "The chapter transition screen doubles as the unlock moment; the trophy list confirms it."
   },
   {
    "id": 4,
    "name": "T**s Ass Drug Money",
    "description": "Complete Chapter 2.",
    "grade": "bronze",
-   "guide": "Chapter 2 continues the main storyline and unlocks when you complete its final mission. Do not worry about optional content during this stretch; the trophy only cares that the chapter is finished. If you are following the roadmap, you will pick this up naturally between the opening and the move into Vice City proper.",
-   "hint": "The second chapter's last mission is the trigger.",
+   "guide": "The second chapter is another milestone on the same straight road: finish its missions, let the closing scene play, collect the trophy. The official wording attaches no side condition, so optional content can wait. Its colorful name is a reference to the money theme of the stretch, not a task. Keep the story momentum and this one costs nothing extra.",
+   "steps": [
+    "Continue the story into chapter two",
+    "Finish every mission the chapter presents",
+    "Watch for the unlock at the chapter close"
+   ],
+   "hint": "The second chapter ends where the trophy fires.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 1,
-   "time": "~1 hour (estimate)",
+   "hours": 1,
+   "minutes": 60,
    "phase": "p2",
-   "missable": "Not expected to be missable for the same reason as the other chapter trophies. Missions are assumed fully playable within the chapter; the exact mission list of Chapter 2 is not verified, so let the story guide you."
+   "requires": [
+    3
+   ],
+   "missable": "No missable risk identified, for the same reason as the other chapter trophies. Play each mission through rather than quitting mid-objective.",
+   "verification": "Unlock fires at the chapter two ending; the console trophy list is the record."
   },
   {
    "id": 5,
    "name": "Vice City, Baby!",
    "description": "Complete Chapter 3.",
    "grade": "bronze",
-   "guide": "Chapter 3 is the next milestone of the story and, by its name, the point where the setting reaches Vice City itself. Complete the chapter's missions in order until its ending scene plays. The trophy should unlock on the chapter's conclusion without any extra requirements, making it one of the safest ticks on the list.",
-   "hint": "Reach the end of the third chapter's story missions.",
+   "guide": "Chapter three carries the story into Vice City proper by its name, and the trophy lands when the chapter closes. There is nothing to grind and nothing to choose; the requirement is plain completion. As with all chapter trophies, the atlas advice is to never abandon a running mission at the midpoint. The unlock should be one of the most reliable on the list.",
+   "steps": [
+    "Progress the story into chapter three",
+    "Complete the chapter’s missions",
+    "Let the ending scene run to the unlock"
+   ],
+   "hint": "The third chapter’s closing scene is the unlock.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 1,
-   "time": "~1 hour (estimate)",
+   "hours": 1,
+   "minutes": 60,
    "phase": "p2",
-   "missable": "Not expected to be missable. As with the other chapters, complete every mission it offers rather than skipping cutscenes mid-mission, since unverified retry behavior is the only theoretical risk."
+   "requires": [
+    4
+   ],
+   "missable": "No missable risk identified: it follows the chapter end directly. Completing offered missions rather than skipping them is the only stated-relevant habit.",
+   "verification": "Chapter transition plus notification; confirm in the trophy list afterwards."
   },
   {
    "id": 6,
    "name": "Top Of The World, Ma",
    "description": "Complete Chapter 4.",
    "grade": "bronze",
-   "guide": "Chapter 4 is the last numbered chapter before the endgame missions. Push the main story to the chapter's final scene and the trophy unlocks by itself. Consider scheduling your side-activity sweep before the finale, because the 100% completion work in the later phases is easier to organize while the world is fully open.",
-   "hint": "The fourth chapter's ending scene is the unlock.",
+   "guide": "Chapter four is the last numbered chapter before the endgame, and the trophy fires when it closes. Nothing in the description asks for optional work, so keep the run lean. The atlas places a planning note here: this is a sensible moment to decide when your collection sweep will happen, since the world stays open afterwards. The unlock itself is automatic on chapter completion.",
+   "steps": [
+    "Play through chapter four",
+    "Finish the chapter’s final scene",
+    "Consider this the cue to plan the open-world sweep"
+   ],
+   "hint": "The fourth chapter’s end scene is the unlock.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 1,
-   "time": "~1-2 hours (estimate)",
+   "hours": 1.5,
+   "minutes": 90,
    "phase": "p3",
-   "missable": "Not expected to be missable: it unlocks with the chapter. The only planning note is ordering, since some players prefer to clear collections before the finale; nothing in the description suggests the chapter blocks that."
+   "requires": [
+    5
+   ],
+   "missable": "No missable risk identified: it unlocks with the chapter. Whether the finale blocks backtracking is unverified, so finish optional strands before the credits if you prefer caution.",
+   "verification": "Unlock at the chapter four ending; the trophy list confirms."
   },
   {
    "id": 7,
    "name": "You Gotta Know When to Get Off",
    "description": "Complete the final mission.",
    "grade": "gold",
-   "guide": "This gold trophy unlocks when you complete the game's final mission. Play the closing mission of the story to its end; no medal or performance condition appears in the official wording, so plain completion is the conservative reading. Treat it as the story's last gate before the long tail of collectibles and challenges in the later phases.",
-   "hint": "Finish the story's last mission, nothing more.",
+   "guide": "The final mission is the story’s last gate, and plain completion is all the official wording asks. Expect a longer set-piece than a routine chapter mission, which is why the atlas rates it slightly above the chapter ticks. No medal or performance threshold is mentioned. Save your resources for it and treat the ending scenes as part of the mission.",
+   "steps": [
+    "Reach the closing mission of the story",
+    "Complete all of its objectives",
+    "Collect the gold unlock at the mission end"
+   ],
+   "hint": "One mission: the last one in the story.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 2,
-   "time": "~30-60 minutes (estimate)",
+   "hours": 1,
+   "minutes": 60,
    "phase": "p3",
-   "missable": "Not expected to be missable: the final mission ends the story and the trophy follows it. Whether final missions can be replayed afterwards is not verified, so do not deliberately leave it until last unless you enjoy risk."
+   "requires": [
+    6
+   ],
+   "missable": "Treat the risk as negligible but real: required missions normally stay reachable after the credits, yet replay behavior is not verified. Do not deliberately postpone it to the very end of the platinum without reason.",
+   "verification": "The mission-end notification; the gold entry appears in the console list immediately."
   },
   {
    "id": 8,
    "name": "Trust",
    "description": "Complete Breakfast Run.",
    "grade": "bronze",
-   "guide": "Breakfast Run is a named story mission listed among the early chapters. Start it from the main mission flow and complete every objective to its end screen. Since it is a required mission, it is expected to unlock for any playthrough that reaches and finishes it, so this is one of the automatic ticks on the road.",
-   "hint": "A required early story mission; play it through.",
+   "guide": "Breakfast Run is a required story mission, which means no route can avoid it and no extra preparation is needed. Start it from the mission flow, complete each objective, and finish the end scene. The official wording sets no performance bar. It is an automatic tick for anyone following the chapters in order.",
+   "steps": [
+    "Reach Breakfast Run in the mission flow",
+    "Complete its objective list",
+    "Let the mission end screen settle"
+   ],
+   "hint": "A required early mission; the flow delivers it.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 1,
-   "time": "within Chapter 1-3 (estimate)",
+   "hours": 0.5,
+   "minutes": 30,
    "phase": "p2",
-   "missable": "Not expected to be missable, as it is a required mission. If a mission can be failed and retried, the retry presumably still counts; permanent failure states for required missions would be highly unusual, but that is an assumption rather than a verified fact."
+   "requires": [
+    3
+   ],
+   "missable": "No missable risk identified: required missions are expected to be completable on any playthrough. Retry behavior is assumed from series convention, not verified.",
+   "verification": "Mission-end notification; the trophy list confirms the entry."
   },
   {
    "id": 9,
    "name": "Break the Bank",
    "description": "Complete The Cartel Heist.",
    "grade": "bronze",
-   "guide": "The Cartel Heist is a required story mission and unlocks the trophy when it is finished. Play through the heist's setup and execution objectives rather than abandoning it partway. As with the other mission trophies, no special performance is mentioned in the official wording, so completion alone is the target.",
-   "hint": "The cartel heist mission, start to finish.",
+   "guide": "The Cartel Heist is a required mission and completion alone is the requirement. Heist-style missions often offer approach choices, and nothing in the description rewards one over another, so pick the plan that suits your style. Play it through in one sitting if you can; abandoning mid-heist risks losing setup progress. The trophy lands at the mission end.",
+   "steps": [
+    "Start The Cartel Heist from the story",
+    "Play the setup and execution objectives",
+    "Finish the mission rather than abandoning it"
+   ],
+   "hint": "The cartel heist plays out through the story flow.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 2,
-   "time": "within Chapters 1-3 (estimate)",
+   "hours": 1,
+   "minutes": 60,
    "phase": "p2",
-   "missable": "Not expected to be missable for a completed playthrough. Heist-style missions sometimes have approach choices; the description attaches no condition to any particular approach, so pick whichever suits you."
+   "requires": [
+    3
+   ],
+   "missable": "No missable risk identified for a completed playthrough. Whether failed attempts require a full restart is unverified, so finish what you start.",
+   "verification": "Notification at mission end; check the trophy list entry."
   },
   {
    "id": 10,
    "name": "Family Matters",
    "description": "Complete Child's Play.",
    "grade": "bronze",
-   "guide": "Child's Play is a story mission; finish it and the trophy unlocks. Follow the mission's markers through to its conclusion and let the ending scene run. Nothing in the official description suggests optional conditions, so this is a straightforward completion tick on the way through the chapters.",
-   "hint": "A required mission, likely later in the story.",
+   "guide": "Child’s Play is a required mission somewhere in the mid-story, and the atlas leaves its exact placement to the game’s own flow rather than guessing a chapter. Completion is the whole requirement. Play it through, watch the ending, and move on. No optional condition is attached in the official wording.",
+   "steps": [
+    "Continue the story until Child’s Play appears",
+    "Complete the mission objectives",
+    "Let the closing scene run"
+   ],
+   "hint": "A story mission; the flow decides when.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 1,
-   "time": "within Chapters 2-4 (estimate)",
+   "hours": 0.5,
+   "minutes": 30,
    "phase": "p3",
-   "missable": "Not expected to be missable. The starter list does not say which chapter holds it, so the time here is an estimate; the mission list itself will make it obvious once you are playing."
+   "requires": [
+    5
+   ],
+   "missable": "No missable risk identified: it is a required mission. Its placement in the chapter order is an estimate in this guide, not a verified fact.",
+   "verification": "Mission-end notification; the trophy list confirms."
   },
   {
    "id": 11,
    "name": "DWNFALL",
    "description": "Complete Headliners.",
    "grade": "bronze",
-   "guide": "Headliners is a required mission and pops when you complete it. See its objectives through to the end rather than retrying or quitting mid-mission. The official description attaches no extra condition, so completion is the whole requirement and no performance target exists.",
-   "hint": "Another required story mission on the list.",
+   "guide": "Headliners is another required mission, so the story itself schedules it. Completion is the only condition the official wording states. Avoid retry loops for style; a clean finished run is all the trophy wants. The unlock arrives at the mission end like the rest of this set.",
+   "steps": [
+    "Reach Headliners in the story flow",
+    "Complete all objectives in one run",
+    "Collect the unlock at the end screen"
+   ],
+   "hint": "One more required mission on the story line.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 1,
-   "time": "within Chapters 2-4 (estimate)",
+   "hours": 0.5,
+   "minutes": 30,
    "phase": "p3",
-   "missable": "Not expected to be missable. As with all mission trophies here, the honest caveat is that retry behavior is assumed from series convention, not verified from the game itself."
+   "requires": [
+    5
+   ],
+   "missable": "No missable risk identified: required missions are assumed fully completable. Retry behavior remains a convention-based assumption.",
+   "verification": "Notification at mission end; trophy list confirms."
   },
   {
    "id": 12,
    "name": "Hi-Jacked",
    "description": "Complete VCIA Takedown.",
    "grade": "bronze",
-   "guide": "VCIA Takedown is a named story mission; the trophy unlocks when the mission ends. Work through its objectives in order and finish the closing scene. As a required mission it should be impossible to miss on a full playthrough, assuming missions cannot be permanently skipped, which is the normal series pattern but is not independently verified.",
-   "hint": "A story mission tied to VCIA, the airport authority.",
+   "guide": "VCIA Takedown takes the story to the airport authority, and completing it is the entire trophy. Expect a set-piece pace rather than a stealth exercise. Note for later planning: the free-roam airport stunt in the street phase is a different trophy, so do not conflate the two locations. The unlock is automatic at mission end.",
+   "steps": [
+    "Play VCIA Takedown from the story flow",
+    "Complete its objectives in order",
+    "Finish the closing scene"
+   ],
+   "hint": "The airport-themed story mission.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 2,
-   "time": "within Chapters 3-4 (estimate)",
+   "hours": 1,
+   "minutes": 60,
    "phase": "p3",
-   "missable": "Not expected to be missable. Note the thematic overlap with trophy t37, which is also set at VCIA; the free-roam stunt there is separate from this mission, so do not confuse the two."
+   "requires": [
+    5
+   ],
+   "missable": "No missable risk identified: it is required content. Its chapter placement is an estimate of this atlas, not a verified fact.",
+   "verification": "Mission-end notification; the trophy list shows the entry."
   },
   {
    "id": 13,
    "name": "Snow Storm",
    "description": "Complete Operation Savage Glory.",
    "grade": "bronze",
-   "guide": "Operation Savage Glory is a required story mission; completing it unlocks the trophy. Play the mission through its full objective list to the end scene. No medal or performance threshold appears in the official description, so treat plain completion as sufficient and move on.",
-   "hint": "A required late-story operation mission.",
+   "guide": "Operation Savage Glory sounds like a set-piece operation, and its trophy is plain completion of it. Budget a longer session than for a routine mission, since operations of this name tend to run multi-stage. No performance threshold appears in the description. Finish the end scene and the tick is yours.",
+   "steps": [
+    "Reach Operation Savage Glory in the story",
+    "Work through the full objective list",
+    "Collect the unlock after the end scene"
+   ],
+   "hint": "A late-story operation mission; expect a long one.",
    "tags": [
     "story-critical"
    ],
    "difficulty": 2,
-   "time": "within Chapters 3-4 (estimate)",
+   "hours": 1,
+   "minutes": 60,
    "phase": "p3",
-   "missable": "Not expected to be missable. The name suggests a set-piece operation, so expect a longer mission; that affects your evening, not the trophy's difficulty."
+   "requires": [
+    5
+   ],
+   "missable": "No missable risk identified: required content. Length is the only notable cost, and that is an estimate from the name.",
+   "verification": "Unlock at the mission end; trophy list confirms."
   },
   {
    "id": 14,
    "name": "A Long Road",
    "description": "Attain 100% Completion.",
    "grade": "gold",
-   "guide": "100% completion is the single largest commitment on the list: every checklist item the game tracks, from missions and activities to collections, must be finished. Expect it to dominate the platinum's total playtime and to require a completion screen check after each batch of content you clear. Budget generously, keep your own progress ticks up to date, and sweep the world map systematically rather than chasing percentages piecemeal.",
-   "hint": "The in-game completion stat is the authority; sweep the map region by region.",
+   "guide": "One hundred percent completion is the heaviest single item in this atlas, and it deserves to be treated as a project rather than a trophy. The official wording does not enumerate what counts, so the in-game checklist is the only authority worth trusting. The atlas advice is to audit the tracker early, schedule its categories as their own sessions, and re-check after every batch of content. Nothing about it is missable in the usual sense; the real risk is an unknown requirement discovered late.",
+   "steps": [
+    "Open the in-game completion checklist early",
+    "Clear its categories region by region",
+    "Re-audit after each batch and before the platinum push"
+   ],
+   "hint": "The in-game completion stat is the authority; audit it region by region.",
    "tags": [],
    "difficulty": 5,
-   "time": "10-20 hours (estimate, dominates the platinum)",
+   "hours": 18,
+   "minutes": 1080,
    "phase": "p7",
-   "missable": "Not expected to be missable in the usual sense, because it is a stat you build up to. The real risk is discovering an unknown requirement late; cross-check the in-game completion list early and often. Exactly which items the game counts is not verified from the official description alone."
+   "requires": [],
+   "missable": "No missable risk identified in the usual sense, because it is a running stat. The practical danger is an unlisted checklist item, so cross-check the in-game tracker early and often.",
+   "verification": "The in-game completion percentage reaching 100 is the proof; the unlock notification follows it."
   },
   {
    "id": 15,
    "name": "Cunning Stunts",
    "description": "Complete 250 Stunts.",
    "grade": "silver",
-   "guide": "250 stunts is a volume trophy: jumps, drifts and other stunt actions across the state, counted cumulatively by the wording. Chain stunt opportunities such as ramps, hills and hairpins on every drive between objectives instead of saving them for one session. At a steady pace across a full playthrough this should pass naturally, but it is long enough that a deliberate stunt loop in a fast car is the reliable closer.",
-   "hint": "Every ramp and drift counts toward the running total.",
+   "guide": "Two hundred and fifty stunts is a volume figure, and the description reads it as a cumulative count rather than a set of specific jumps. The atlas habit is simple: never drive anywhere without hunting a ramp, a hill or a drift line, because the count climbs invisibly while you do everything else. Save a deliberate stunt loop in a fast car for the final stretch, when the last dozens refuse to arrive. A single long evening usually closes it.",
+   "steps": [
+    "Chain stunts on every drive between objectives",
+    "Favor obvious ramps, hills and drift opportunities",
+    "Close the last dozens with a dedicated fast-car loop"
+   ],
+   "hint": "Every ramp and drift adds to the running total.",
    "tags": [],
    "difficulty": 4,
-   "time": "~4-8 hours across the campaign (estimate)",
+   "hours": 5,
+   "minutes": 300,
    "phase": "p6",
-   "missable": "Not expected to be missable, since the count is cumulative and stunts presumably remain available after the story. The exact list of what counts as a stunt is not verified, so favor obvious ramp and drift actions."
+   "requires": [],
+   "missable": "No missable risk identified: the count is cumulative and stunts presumably stay available after the story. What exactly qualifies as a stunt is unverified, so favor the obvious actions.",
+   "verification": "Watch the running total in the relevant stats screen; the unlock notification fires at 250."
   },
   {
    "id": 16,
    "name": "Master of None",
    "description": "Try each type of activity once.",
    "grade": "bronze",
-   "guide": "The official wording asks you to try each type of activity once, which the starter's notes count as nine types. Open each activity you find, whether that is racing, the shooting range, fishing, arcade games or anything else, at least one time each, even if you do not finish the session. Because the exact activity list is not independently verified, use the in-game tracker or activity menu as the authority before declaring this done.",
+   "guide": "The description asks you to try each type of activity once, and the atlas treats the in-game activity menu as the definitive type list since no count is stated officially. The trick of this trophy is breadth, not skill: a single entered session of each type satisfies the wording. Sampling during the story keeps it nearly free. Do a final menu audit before writing it off.",
+   "steps": [
+    "List the activity types from the in-game menu",
+    "Enter one session of each type",
+    "Cross-check the menu for any type you missed"
+   ],
    "hint": "Open every kind of activity once, even briefly.",
    "tags": [],
    "difficulty": 2,
-   "time": "~1-2 hours (estimate)",
+   "hours": 1.5,
+   "minutes": 90,
    "phase": "p6",
-   "missable": "Treat as possibly missable only in the sense that an unknown ninth activity could be overlooked; activities are presumably always available. The honest position is that the nine types come from the starter's notes, not from verified play."
+   "requires": [],
+   "missable": "Treat as borderline only because an unknown activity type could be overlooked; activities are presumably always open. The menu audit is the safeguard.",
+   "verification": "No stated counter; confirm by your own menu walkthrough that each type has been opened."
   },
   {
    "id": 17,
    "name": "The Shootist",
    "description": "Earn a gold medal in all Shooting Range challenges.",
    "grade": "silver",
-   "guide": "Every Shooting Range challenge needs a gold medal, and the starter's notes put the challenge count at 42. Practice each challenge type before chasing gold, since several weapon drills reward rhythm and target order over raw speed. Expect this to be one of the harder trophies on the list and budget several focused sessions for it, ideally with your loadout and settings settled first.",
-   "hint": "Gold in all 42 Shooting Range challenges; practice before scoring.",
+   "guide": "Gold in every Shooting Range challenge is a skill trophy, and the atlas advises learning before scoring: several drills reward rhythm and target order over raw reaction speed. Settle your loadout and settings first, then climb the list one challenge at a time. This is one of the harder items on the list and deserves multiple focused sessions. The range is a repeatable system, so a lost evening costs nothing but time.",
+   "steps": [
+    "Learn each range challenge type with practice runs",
+    "Then chase gold one challenge at a time",
+    "Budget several sessions rather than one marathon"
+   ],
+   "hint": "Practice each drill before chasing the gold threshold.",
    "tags": [],
    "difficulty": 4,
-   "time": "~3-6 hours (estimate)",
+   "hours": 4,
+   "minutes": 240,
    "phase": "p6",
-   "missable": "Not expected to be missable: the range is a repeatable activity and medals presumably persist. Whether existing medals can be re-earned for a better score is not verified, but that does not affect the trophy."
+   "requires": [],
+   "missable": "No missable risk identified: the range is repeatable and medals presumably persist. Whether an existing medal can be re-earned for a better score is unverified, but it does not affect the trophy.",
+   "verification": "The range results screens show the medal per challenge; the unlock fires when all show gold."
   },
   {
    "id": 18,
    "name": "Top Fun",
    "description": "Win a Top Fun Drone Race at every location.",
    "grade": "bronze",
-   "guide": "A Top Fun drone race must be won at every location, and the starter's notes put the count at 14. A win in racing means finishing first, so treat every course as a race to win rather than a sightseeing tour. Learn each layout's shortcuts on an early attempt and then push for the win; the in-game location list is your checklist.",
-   "hint": "Win, not just finish, a drone race at all 14 locations.",
+   "guide": "A win at every Top Fun location is a tour with a competitive twist: finishing is not enough, first place is. The atlas method is to use the first entry at a new location as a scouting lap, then push for the win once the shortcuts are known. Treat the in-game location list as the checklist rather than trusting memory. A win at the last location closes the trophy.",
+   "steps": [
+    "Enter a Top Fun race at each location once to learn it",
+    "Learn each course’s shortcuts early",
+    "Convert every location into a first-place finish"
+   ],
+   "hint": "Win, not just finish, at each drone race location.",
    "tags": [],
    "difficulty": 3,
-   "time": "~2-4 hours (estimate)",
+   "hours": 2.5,
+   "minutes": 150,
    "phase": "p6",
-   "missable": "Not expected to be missable, as races are repeatable activities by convention. The 14 locations come from the starter's notes and are not independently verified, so let the in-game menu confirm the count."
+   "requires": [],
+   "missable": "No missable risk identified: races are repeatable activities. The location count is whatever the in-game menu lists; this guide does not state a number as fact.",
+   "verification": "Each location shows your best result in its menu entry; the unlock follows the last first-place."
   },
   {
    "id": 19,
    "name": "Earn Cash, Not Kudos",
    "description": "Win 20 different races.",
    "grade": "bronze",
-   "guide": "Twenty different races must be won, and different means twenty distinct races rather than twenty wins of the same one. Spread your wins across the race types and locations the game offers, keeping a rough count as you go. Repeating a race you have already won presumably adds nothing, so diversify early instead of farming a favorite.",
-   "hint": "Twenty distinct race wins; variety is the requirement.",
+   "guide": "Twenty different races means twenty distinct events, not twenty wins of one favorite. The atlas advice is to diversify from the start: rotate across the race categories and locations, keeping a rough tally as you go. Repeat wins of the same event presumably add nothing, so a farmed circuit is wasted effort. Race pacing matters more than speed here.",
+   "steps": [
+    "Spread entries across the race types offered",
+    "Count wins against distinct events, not repeats",
+    "Convert a sure lead carefully in the final laps"
+   ],
+   "hint": "Twenty distinct wins; variety beats farming.",
    "tags": [],
    "difficulty": 3,
-   "time": "~2-4 hours (estimate)",
+   "hours": 3,
+   "minutes": 180,
    "phase": "p6",
-   "missable": "Not expected to be missable. The main uncertainty is whether wins from different race categories all count toward the twenty; the description says different races, so the safest read is twenty unique events of any category."
+   "requires": [],
+   "missable": "No missable risk identified: races repeat. Whether wins from different categories all count is unverified; the plain reading is any twenty distinct race events.",
+   "verification": "Track distinct wins yourself and watch for the notification on the twentieth."
   },
   {
    "id": 20,
    "name": "Baited My Tackle",
    "description": "Beat Cal in a fishing challenge.",
    "grade": "bronze",
-   "guide": "This trophy asks you to beat Cal in a fishing challenge. Find the challenge through the fishing activity and outperform Cal by whatever the challenge measures, whether that is size, weight or count of fish. If the first attempt falls short, the challenge should be repeatable, though repeatability is assumed from the activity format rather than verified.",
-   "hint": "A named rival fishing duel; win it once.",
+   "guide": "Beating Cal is a single rivalry duel inside the fishing activity, not a fishing grind. Learn what the duel measures, size or count, then outperform him by it. If a first attempt falls short, the activity format implies a retry, though that is convention rather than verified fact. One comfortable evening is a generous budget.",
+   "steps": [
+    "Find the fishing challenge through the fishing activity",
+    "Learn the duel’s scoring measure",
+    "Outperform Cal and take the win"
+   ],
+   "hint": "One named rival duel; win it once.",
    "tags": [],
    "difficulty": 2,
-   "time": "~30-60 minutes (estimate)",
+   "hours": 0.75,
+   "minutes": 45,
    "phase": "p6",
-   "missable": "Not expected to be missable assuming the challenge can be re-attempted. If a loss somehow closed the challenge permanently, that would be a one-shot design the description does not hint at; the conservative move is to attempt it when your fishing handling feels comfortable."
+   "requires": [],
+   "missable": "No missable risk identified, assuming the challenge can be re-attempted. The conservative move is to attempt it when your fishing handling feels solid.",
+   "verification": "The duel result screen is the immediate proof; the notification follows the win."
   },
   {
    "id": 21,
    "name": "Stick Fiddler",
    "description": "Complete an arcade game.",
    "grade": "bronze",
-   "guide": "Complete any one arcade game to unlock this trophy. Find a cabinet through the arcade activity, play the game to its natural end, and let the result screen settle. Since only one completion is required, pick the game you find easiest rather than attempting all of them; the wording sets the bar at a single finish.",
-   "hint": "One cabinet, one finished game, that is all.",
+   "guide": "One completed arcade game is the whole requirement, so the atlas says to pick the cabinet you like best rather than sampling all of them. Play the game to its natural end and let the result screen settle. There is no score threshold in the description. This is a coffee-break trophy.",
+   "steps": [
+    "Find an arcade cabinet through the arcade activity",
+    "Pick the game you find easiest",
+    "Play it to its natural end screen"
+   ],
+   "hint": "Any cabinet, any game, finished once.",
    "tags": [],
    "difficulty": 1,
-   "time": "~15-30 minutes (estimate)",
+   "hours": 0.25,
+   "minutes": 15,
    "phase": "p6",
-   "missable": "Not expected to be missable. The starter list does not name the arcade games, so which cabinet you use is a free choice; nothing in the description suggests a specific game is required."
+   "requires": [],
+   "missable": "No missable risk identified: arcade cabinets are permanent fixtures. The description names no specific game.",
+   "verification": "The game’s own end screen followed by the notification."
   },
   {
    "id": 22,
    "name": "Road to Rehabilitation",
    "description": "Complete the final mission for Andy.",
    "grade": "bronze",
-   "guide": "Andy's strand ends with a final mission that unlocks this trophy when completed. Follow Andy's side missions from wherever they begin in the world until the strand's last mission appears, then finish it. Treat the strand as required content for 100% completion as well, so finishing it does double duty on your checklist.",
-   "hint": "Play Andy's strand through to its last mission.",
+   "guide": "Andy’s strand closes with a final mission, and that mission is the trophy. Work the strand in order, because a strand’s last mission normally gates behind its earlier ones. The atlas counts this strand as completion content too, so the time is never wasted. One or two free-roam sittings should cover the whole line.",
+   "steps": [
+    "Find Andy’s strand and start it",
+    "Play its missions in order",
+    "Complete the strand’s final mission"
+   ],
+   "hint": "Andy’s strand, played through to the last mission.",
    "tags": [],
    "difficulty": 2,
-   "time": "~1-2 hours for the strand (estimate)",
+   "hours": 1.5,
+   "minutes": 90,
    "phase": "p5",
-   "missable": "Not expected to be missable for a full playthrough, since strands are part of completion. The starter list does not say where Andy's missions start, so the location and any level of the strand gating the final mission are estimates."
+   "requires": [
+    6
+   ],
+   "missable": "No missable risk identified for a completed strand. Its starting location and length are estimates of this guide, not verified facts.",
+   "verification": "The strand’s mission list shows the final mission completed; the notification follows."
   },
   {
    "id": 23,
    "name": "This Was No Boat Accident",
    "description": "Complete the final mission for Kenton.",
    "grade": "bronze",
-   "guide": "Kenton's strand closes with a final mission; finish it and the trophy unlocks. Work through Kenton's missions in order, because strands typically gate their final mission behind the earlier ones. Keep the strand's objectives in mind during free-roam sessions so the whole line is finished in a handful of sittings.",
-   "hint": "Kenton's strand, played in order to the end.",
+   "guide": "Kenton’s strand ends the same way the others do: a final mission that is the whole trophy. Run the strand’s missions in sequence and keep the line in mind during free-roam sessions so it closes in a handful of sittings. The strand feeds the completion audit as well, which the atlas treats as a bonus. The unlock arrives at the final mission’s end.",
+   "steps": [
+    "Start Kenton’s strand where the world introduces it",
+    "Play its missions in sequence",
+    "Finish the final mission for the unlock"
+   ],
+   "hint": "Kenton’s strand, in order, to the end.",
    "tags": [],
    "difficulty": 2,
-   "time": "~1-2 hours for the strand (estimate)",
+   "hours": 1.5,
+   "minutes": 90,
    "phase": "p5",
-   "missable": "Not expected to be missable. As with the other strands, the assumption that earlier strand missions are prerequisites for the final one follows series convention and is not verified from the official description."
+   "requires": [
+    6
+   ],
+   "missable": "No missable risk identified: strands are standard free-roam content. The gating order inside the strand is convention, not verified fact.",
+   "verification": "Strand mission list shows the final mission done; notification follows."
   },
   {
    "id": 24,
    "name": "The Lone Rider",
    "description": "Complete the final mission for Billy.",
    "grade": "bronze",
-   "guide": "Billy's strand finishes with its own final mission, and completing that mission unlocks the trophy. Start Billy's missions early in your playthrough so the strand's steps are spread out rather than rushed at the end of the campaign. The strand also feeds 100% completion, so finishing it serves both goals at once.",
-   "hint": "Billy's strand, played in order to the end.",
+   "guide": "Billy’s strand is a short campaign of its own, and its final mission is the trophy trigger. The atlas prefers starting strands early in the free-roam phase so their steps spread across sessions instead of stacking at the end. Play the missions as the strand presents them. The final mission’s end screen delivers the unlock.",
+   "steps": [
+    "Start Billy’s strand early in free-roam",
+    "Complete its missions as they unlock",
+    "Close the final mission"
+   ],
+   "hint": "Billy’s strand, in order, to the end.",
    "tags": [],
    "difficulty": 2,
-   "time": "~1-2 hours for the strand (estimate)",
+   "hours": 1.5,
+   "minutes": 90,
    "phase": "p5",
-   "missable": "Not expected to be missable. The strand's starting point and length are not verified, so treat the time here as a rough estimate until you are in it."
+   "requires": [
+    6
+   ],
+   "missable": "No missable risk identified: standard strand content. Its length is an estimate.",
+   "verification": "The strand list shows the final mission complete; notification follows."
   },
   {
    "id": 25,
    "name": "Strangers & Freaks",
    "description": "Complete 8 mission strands for strangers across the state of Leonida.",
    "grade": "silver",
-   "guide": "Eight mission strands for strangers across Leonida must be completed, and the silver grade signals that this is more than a token task. The state has more strands than eight by the starter's notes, so you can choose the ones that suit your route, but every strand you pick must be played through to its own final mission. Track which strands you have closed in the pause menu before moving on to the next.",
-   "hint": "Eight stranger strands, each finished to its last mission.",
+   "guide": "Eight completed strands is a commitment count, and the silver grade signals the scale. The atlas rule is simple: finish what you start, because a half-done strand is progress you cannot bank. There are more strands in the state than eight, so choose the lines that suit your route and close them one by one. Track the finished total in the pause menu before moving on.",
+   "steps": [
+    "Pick eight strands and commit to them",
+    "Play each to its final mission",
+    "Track the finished count before moving on"
+   ],
+   "hint": "Eight finished strands beat ten started ones.",
    "tags": [],
    "difficulty": 3,
-   "time": "~4-8 hours (estimate)",
-   "phase": "p7",
-   "missable": "Not expected to be missable, because the requirement is a count over available strands rather than a specific set. Whether a partially completed strand still counts toward the eight once abandoned mid-strand is not verified; the safe plan is to finish what you start."
+   "hours": 5,
+   "minutes": 300,
+   "phase": "p5",
+   "requires": [],
+   "missable": "No missable risk identified: the requirement is a count over available strands. Whether abandoning a strand mid-way still counts its finished missions is unverified; finishing whole strands avoids the question.",
+   "verification": "The pause-menu strand tracker shows completed strands; the unlock fires at eight."
   },
   {
    "id": 26,
    "name": "Supply & Demand",
    "description": "Complete the final mission for Randy.",
    "grade": "bronze",
-   "guide": "Randy's strand ends with a final mission that unlocks this trophy. Play Randy's missions through in order until the last one is available, then complete it. As with the other strangers, the strand counts toward 100% completion, so the time is never wasted even beyond the trophy itself.",
-   "hint": "Randy's strand, played in order to the end.",
+   "guide": "Randy’s strand follows the same shape as its siblings: a line of missions closing in a final one, which is the trophy. Play it in order during the free-roam phase and it costs an evening at most. The strand also feeds the completion audit. The unlock arrives with the final mission.",
+   "steps": [
+    "Start Randy’s strand",
+    "Complete its missions in sequence",
+    "Finish the final mission"
+   ],
+   "hint": "Randy’s strand, in order, to the end.",
    "tags": [],
    "difficulty": 2,
-   "time": "~1-2 hours for the strand (estimate)",
+   "hours": 1.5,
+   "minutes": 90,
    "phase": "p5",
-   "missable": "Not expected to be missable. The strand's length and difficulty are estimates; its final mission is the only trigger named in the description."
+   "requires": [
+    6
+   ],
+   "missable": "No missable risk identified: standard strand content. Length and placement are estimates.",
+   "verification": "Strand list shows the final mission done; notification follows."
   },
   {
    "id": 27,
    "name": "Spin On This!",
    "description": "Complete the final mission for Tyrone.",
    "grade": "bronze",
-   "guide": "Tyrone's strand finishes with a final mission; complete it for the trophy. Follow Tyrone's missions from their starting point through to the strand's close, in order. Finish this alongside the other strands during your mid-game free-roam blocks so the eight-strand total required for the silver comes together naturally.",
-   "hint": "Tyrone's strand, played in order to the end.",
+   "guide": "Tyrone’s strand is the last of the named lines in this atlas phase, and its final mission is the trophy. Run it like the rest: in order, at free-roam pace, with the strand tracker open. The named strands together also make the eight-strand count realistic, which is why this phase batches them. The final mission delivers the unlock.",
+   "steps": [
+    "Start Tyrone’s strand",
+    "Play its missions in sequence",
+    "Close the final mission for the unlock"
+   ],
+   "hint": "Tyrone’s strand, in order, to the end.",
    "tags": [],
    "difficulty": 2,
-   "time": "~1-2 hours for the strand (estimate)",
+   "hours": 1.5,
+   "minutes": 90,
    "phase": "p5",
-   "missable": "Not expected to be missable. As with the other strand trophies, ordering inside the strand is assumed, not verified; play the missions as the game presents them and the final one will arrive."
+   "requires": [
+    6
+   ],
+   "missable": "No missable risk identified: standard strand content. The in-strand order is convention, not verified.",
+   "verification": "Strand list shows the final mission complete; notification follows."
   },
   {
    "id": 28,
    "name": "Positive Mental Attitude",
    "description": "Meditate at every spot across Leonida.",
    "grade": "bronze",
-   "guide": "Meditate at every spot across Leonida; the starter's notes count 18. Meditation spots are usually marked on the map once discovered, so sweep the map region by region and use each marker you find. Because this is completion-list content, cross-check the in-game tracker rather than trusting memory for the last few spots, which are almost always the ones you skipped.",
-   "hint": "18 meditation spots; sweep the map and use each one.",
+   "guide": "Meditation at every spot is a map-sweep trophy, and the atlas treats the in-game markers as the definitive count since the official description states no number. Sweep region by region rather than chasing pins at random, and use each spot the moment you find it. The last few are always the ones you skipped, so a final map audit is part of the plan. Collectible-type content like this feeds the completion audit too.",
+   "steps": [
+    "Sweep the map region by region for meditation markers",
+    "Use each spot when visited",
+    "Re-audit the map for the last stragglers"
+   ],
+   "hint": "Use each meditation marker as you find it.",
    "tags": [
     "collectible"
    ],
    "difficulty": 2,
-   "time": "~2-3 hours (estimate)",
-   "phase": "p7",
-   "missable": "Not expected to be missable, since the spots are part of the world's completion content. Whether a missed spot can still be visited after the story is presumably yes and is exactly the kind of assumption this guide flags as unverified."
+   "hours": 2,
+   "minutes": 120,
+   "phase": "p5",
+   "requires": [],
+   "missable": "No missable risk identified: the spots are fixed world content and presumably remain after the story. The total count is whatever the in-game map shows.",
+   "verification": "The meditation counter in the relevant menu shows progress; the unlock fires at the last spot."
   },
   {
    "id": 29,
    "name": "Fair Game",
    "description": "Hunt a unique animal for Bret.",
    "grade": "bronze",
-   "guide": "Hunt the unique animal that Bret asks for. Take Bret's hunting strand until the unique animal hunt becomes available, then complete the hunt by its rules; the animal presumably must be taken cleanly, though the exact rules are not verified from the description. The strand itself also progresses your stranger mission count, so the effort is shared.",
-   "hint": "Bret's strand leads to one special hunt.",
+   "guide": "Bret’s strand funnels into one unique animal hunt, and completing that hunt is the trophy. Take the strand’s earlier missions first, then approach the hunt on its own terms, since a unique hunt may carry clean-take conditions the description does not spell out. Patience is the whole skill here. The strand also feeds the stranger-strand work, so the effort is shared.",
+   "steps": [
+    "Progress Bret’s strand until the hunt opens",
+    "Study the hunt’s rules before the attempt",
+    "Complete the unique animal hunt cleanly"
+   ],
+   "hint": "One special hunt inside Bret’s strand.",
    "tags": [],
    "difficulty": 3,
-   "time": "~1-2 hours (estimate)",
+   "hours": 1.5,
+   "minutes": 90,
    "phase": "p5",
-   "missable": "Possibly missable in the sense that a unique animal hunt could have a window or a clean-kill condition that fails permanently; that is a conservative assumption, not a verified fact. Attempt the hunt with patience and save beforehand if the game allows it."
+   "requires": [
+    6
+   ],
+   "missable": "Treat the timing as semi-sensitive: if the hunt has a window or a fail-permanent condition, a rushed attempt could cost it. That is a conservative assumption, not a verified fact.",
+   "verification": "The hunt’s completion scene plus notification; the strand list confirms."
   },
   {
    "id": 30,
    "name": "Don't Touch My Deck",
    "description": "Complete 3 Collectible Card sets.",
    "grade": "silver",
-   "guide": "Three collectible card sets must be completed. Card sets are the classic collection loop: gather the cards scattered across the world until one full set, then three, are finished. Since sets are finite, a missing card is recoverable only by finding it, so keep a checklist and sweep areas methodically rather than at random.",
-   "hint": "Find every card needed to close three full sets.",
+   "guide": "Three complete card sets is the classic collection loop, and the atlas insists on a checklist because a set with one missing card is worth zero. Gather cards region by region rather than at random, and reconcile each set’s gaps before moving to a new area. Sets are finite, so a missing card is recoverable only by finding it. The third completed set triggers the unlock.",
+   "steps": [
+    "Start collecting cards region by region",
+    "Keep a checklist per set",
+    "Close three full sets to finish"
+   ],
+   "hint": "Checklists beat memory; sweep areas methodically.",
    "tags": [
     "collectible"
    ],
    "difficulty": 3,
-   "time": "~3-5 hours (estimate)",
+   "hours": 4,
+   "minutes": 240,
    "phase": "p7",
-   "missable": "Not expected to be missable, since collectibles remain in the world; the honest caveat is that the number of cards per set and the total number of sets are not verified. Three completed sets out of however many exist is the stated bar."
+   "requires": [],
+   "missable": "No missable risk identified: cards remain in the world. The cards-per-set and total-set numbers are whatever the in-game collection menu states.",
+   "verification": "The collection menu shows set completion; the unlock fires on the third full set."
   },
   {
    "id": 31,
    "name": "You WAiNKer!",
    "description": "WAiNK It at 100 locations.",
    "grade": "silver",
-   "guide": "WAiNK It at 100 locations, which is a long-haul traversal trophy with a silver grade. The starter's notes give the location count, so use the in-game tracker to watch your total climb and plan routes through dense areas. The last handful is usually the slowest, so save a session for the far corners of the map you never otherwise visit.",
-   "hint": "100 WAiNK locations; route through dense areas and cover the edges last.",
+   "guide": "One hundred WAiNK locations is a traversal trophy, and the atlas plans it like a delivery route: dense districts first in passing, far corners in one dedicated session at the end. The in-game tracker shows the running total, which is the only number worth trusting. The last handful is always the slowest, so budget a final sweep. Keep moving; the counter does the rest.",
+   "steps": [
+    "Plan routes through dense districts",
+    "Trigger the WAiNK action at each location",
+    "Save the far corners for a dedicated session"
+   ],
+   "hint": "Cover dense areas first, the far edges last.",
    "tags": [
     "collectible"
    ],
    "difficulty": 3,
-   "time": "~4-6 hours (estimate)",
+   "hours": 5,
+   "minutes": 300,
    "phase": "p7",
-   "missable": "Not expected to be missable, since the locations are fixed world content. The exact trigger of a WAiNK location, meaning where you must stand or what you must do there, is not verified; follow the in-game prompts."
+   "requires": [],
+   "missable": "No missable risk identified: the locations are fixed world content. What exactly triggers a location’s count is whatever the in-game prompt indicates.",
+   "verification": "The in-game counter shows the running total; the unlock fires at 100."
   },
   {
    "id": 32,
    "name": "One Last Thing",
    "description": "Complete 50 Challenges.",
    "grade": "bronze",
-   "guide": "Fifty challenges must be completed. Challenges are the game's scattered side objectives, so sample every type you encounter and finish the ones that suit your build and vehicle. Fifty is a volume target rather than a skill wall: a handful per session across the platinum campaign reaches it comfortably.",
+   "guide": "Fifty challenges is a volume target rather than a skill wall, and the atlas advises treating it as background work: a handful per session across the campaign reaches it without a dedicated grind. Sample every type you meet, finish what suits you, and let the tally grow. No specific challenge list is stated officially. The fiftieth completion fires the unlock.",
+   "steps": [
+    "Sample every challenge type you encounter",
+    "Finish the ones that suit your build",
+    "Tally the completions across sessions"
+   ],
    "hint": "A volume target; finish small challenges steadily.",
    "tags": [],
    "difficulty": 3,
-   "time": "~3-5 hours (estimate)",
+   "hours": 3.5,
+   "minutes": 210,
    "phase": "p6",
-   "missable": "Not expected to be missable. What counts as a challenge and whether failed attempts reset progress are not verified; treat any completed attempt as a tick in your favor."
+   "requires": [],
+   "missable": "No missable risk identified: challenges presumably repeat or at least accumulate. What counts as a challenge is whatever the game’s own tracker says.",
+   "verification": "Track completions in the relevant menu; the notification fires at fifty."
   },
   {
    "id": 33,
    "name": "Hot Together",
    "description": "Lose a 4 star Wanted Level with your partner and escape the heat.",
    "grade": "bronze",
-   "guide": "Lose a four-star wanted level with your partner and escape the heat, which is a staged chaos exercise rather than a milestone. Raise your wanted level deliberately in a partner-enabled stretch of the game, then run the escape with your partner active until the wanted level clears. Pick an escape route with cover and a getaway vehicle planned in advance, because four stars is high enough that improvisation gets messy fast.",
-   "hint": "Escalate to four stars with your partner active, then shake the police.",
+   "guide": "Shaking a four-star wanted level alongside your partner is a staged chaos exercise, and the atlas treats it as a planned stunt rather than an accident. Build the heat deliberately in a stretch where your partner is active, because improvising a four-star escape is where runs go wrong. Choose the getaway route and vehicle before the stars appear. The unlock lands when the heat fully clears.",
+   "steps": [
+    "Raise a wanted level to four stars with your partner active",
+    "Plan an escape route and vehicle beforehand",
+    "Run the heat down until it clears"
+   ],
+   "hint": "Escalate deliberately, then escape with a planned route.",
    "tags": [],
    "difficulty": 3,
-   "time": "~30-60 minutes including setup (estimate)",
+   "hours": 0.75,
+   "minutes": 45,
    "phase": "p4",
-   "missable": "Not expected to be missable, assuming the wanted system works throughout free-roam. Whether the partner must survive to the very end of the escape is not verified; keep them alive regardless, since that is the natural reading."
+   "requires": [
+    10
+   ],
+   "missable": "No missable risk identified: the wanted system presumably works throughout free-roam. Whether the partner must survive to the very end is unverified; keep them alive as the natural reading.",
+   "verification": "The wanted stars clearing while the partner is active, followed by the notification."
   },
   {
    "id": 34,
    "name": "Retail Therapy",
    "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
    "grade": "bronze",
-   "guide": "Rob three shops back-to-back with your partner without losing your wanted level. Choose three shops close together, trigger the robberies in sequence, and keep the wanted level alive between them, because the constraint is that it must not be lost mid-run. Plan the getaway for immediately after the third shop so the streak and your escape line up instead of fighting each other.",
-   "hint": "Three shops in a row, wanted level never cleared in between.",
+   "guide": "Three shop robberies on a live wanted level is a streak exercise, and the atlas plans it like a circuit: shops chosen for proximity, robberies triggered in sequence, heat deliberately kept alive between them. The failure mode is losing the wanted level accidentally, so route the run away from ambush-friendly streets. Plan the final escape to start immediately after the third shop. The streak ending is the unlock.",
+   "steps": [
+    "Pick three shops close together",
+    "Trigger the robberies in sequence",
+    "Keep the wanted level alive until the third completes"
+   ],
+   "hint": "Three shops in a row, heat never cleared between.",
    "tags": [],
    "difficulty": 3,
-   "time": "~30-60 minutes (estimate)",
+   "hours": 0.75,
+   "minutes": 45,
    "phase": "p4",
-   "missable": "Not expected to be missable, since shop robberies are presumably repeatable. Whether the wanted level must still be active at the exact moment the third robbery completes is not verified; the safe play is to keep it hot continuously until all three are done."
+   "requires": [
+    10
+   ],
+   "missable": "No missable risk identified: shop robberies presumably repeat. Whether the heat must still be live at the exact completion moment is unverified; keeping it hot continuously satisfies either reading.",
+   "verification": "The third robbery completing with the streak intact, followed by the notification."
   },
   {
    "id": 35,
    "name": "Whip It Good",
    "description": "Discover 100 vehicles.",
    "grade": "bronze",
-   "guide": "Discover 100 vehicles. Discovery presumably happens by driving, riding in or at least closely encountering each model, so vary everything you steal and drive across the campaign. Check the in-game vehicle list progress periodically; common models come quickly and the long tail of rare vehicles is where the real effort goes.",
-   "hint": "Drive and steal widely; the in-game list shows your discovery count.",
+   "guide": "One hundred discovered vehicles is a breadth trophy, and the atlas habit is simple: never take the same model twice when a new one is parked next to it. Common models fill the count early, and the real work is the rare tail, which deserves its own session with the in-game list open. Ride, drive or steal — the description only says discover, so prefer being behind the wheel when something unusual appears. The hundredth discovery fires the unlock.",
+   "steps": [
+    "Vary every vehicle you take across the campaign",
+    "Check the discovery list periodically",
+    "Hunt the rare tail with dedicated sessions"
+   ],
+   "hint": "Steal and drive widely; the in-game list shows the count.",
    "tags": [
     "collectible"
    ],
    "difficulty": 3,
-   "time": "~3-6 hours across the campaign (estimate)",
+   "hours": 4,
+   "minutes": 240,
    "phase": "p7",
-   "missable": "Not expected to be missable, since vehicle spawns persist in the world. Whether riding as a passenger counts as a discovery is not verified, so prefer taking the wheel yourself when a rare model appears."
+   "requires": [],
+   "missable": "No missable risk identified: spawns persist in the world. Whether passenger rides count is unverified; driving yourself satisfies the plain reading.",
+   "verification": "The in-game vehicle list shows the discovery count; the unlock fires at 100."
   },
   {
    "id": 36,
    "name": "Gunslinger",
    "description": "Take down 5 enemies in a single use of Combat Focus.",
    "grade": "bronze",
-   "guide": "Take down five enemies in a single use of Combat Focus. Combat Focus is the game's slow-motion ability, so build toward a moment where five or more enemies are clustered, activate it, and drop them before the meter drains. A busy firefight in a story mission replay or a gang clash is the natural setting; reload beforehand and pick your moment rather than forcing it.",
-   "hint": "Cluster five enemies, then slow time and clear them all in one activation.",
+   "guide": "Five takedowns in a single Combat Focus activation is a timing trophy, not a grind. The atlas setup advice: reload before the attempt, find a firefight where enemies cluster, and trigger the slow-motion window only when all five are reachable. A gang clash or a dense story firefight is the natural stage. One clean activation closes it.",
+   "steps": [
+    "Find a firefight with five or more enemies grouped",
+    "Activate Combat Focus at the right moment",
+    "Take all five down before the meter drains"
+   ],
+   "hint": "Cluster five enemies, then slow time once.",
    "tags": [],
    "difficulty": 3,
-   "time": "~30-60 minutes of attempts (estimate)",
+   "hours": 0.75,
+   "minutes": 45,
    "phase": "p4",
-   "missable": "Not expected to be missable, since Combat Focus presumably recharges and firefights recur. Whether the five takedowns must be kills or just downings is not verified; aim for definitive takedowns to satisfy either reading."
+   "requires": [],
+   "missable": "No missable risk identified: Combat Focus presumably recharges and firefights recur. Whether takedowns must be kills is unverified; aim for definitive results to satisfy either reading.",
+   "verification": "The notification fires on the fifth takedown within one activation."
   },
   {
    "id": 37,
    "name": "Catch Me If You Can",
    "description": "Make an unscheduled departure at VCIA.",
    "grade": "bronze",
-   "guide": "Make an unscheduled departure at VCIA, the airport. The wording points to leaving the airport by a means the schedule does not offer, and the exact method is not verified, so expect to experiment with vehicles and access points around the airport perimeter. Treat this as a free-roam stunt rather than a mission objective, and save before serious attempts so a failed experiment costs you nothing.",
-   "hint": "Get out of the airport in a way no timetable would approve.",
+   "guide": "An unscheduled departure at VCIA is deliberately open-ended, and the atlas reads it as an experiment trophy: the game wants you out of the airport by a route no schedule would sanction. The exact method is not stated, so budget exploration time and treat failed ideas as tuition. Save before serious attempts. When the right exit works, the notification settles the mystery.",
+   "steps": [
+    "Explore the VCIA perimeter for access points",
+    "Try unusual vehicles and routes out",
+    "Save before committed attempts"
+   ],
+   "hint": "Leave the airport by a means no timetable offers.",
    "tags": [
     "missable"
    ],
    "difficulty": 3,
-   "time": "~30-60 minutes of experimentation (estimate)",
+   "hours": 1,
+   "minutes": 60,
    "phase": "p4",
-   "missable": "Tagged missable as a conservative default: if the departure method depends on an event, vehicle or access that only exists under certain conditions, the opportunity could pass. Nothing in the official description confirms either direction, so this tag means plan for it early rather than assume it waits."
+   "requires": [],
+   "missable": "Treat as missable by default: if the departure depends on an event, vehicle or access that exists only under some conditions, the window could close. The description confirms neither direction, so plan the experiment early.",
+   "verification": "The unlock notification on the successful departure; there is no stated counter."
   },
   {
    "id": 38,
    "name": "Challenging Tank",
    "description": "Kinda hot in these Rhinos.",
    "grade": "bronze",
-   "guide": "The description is a nod to being stuck in a Rhino, the tank, so the trophy almost certainly involves getting into or otherwise dealing with one. Tanks are usually acquired through military installations or staged events, and neither route is verified here, so check the in-game help and world markers for how Rhinos appear. Once you are in or up against one, the trophy's trigger should follow the description's scenario directly.",
-   "hint": "Find a Rhino tank; the description's joke tells you the scenario.",
-   "tags": [],
+   "guide": "The description is a wink at being inside a Rhino tank, and the atlas treats finding one as the actual work. Tanks usually arrive through military sites or staged events, and neither route is confirmed, so the in-game help and world markers are the first places to look. Once the Rhino is available, the scenario the description jokes about is the trigger. Save the access opportunity before using it.",
+   "steps": [
+    "Look for tank access at military or event locations",
+    "Check in-game help for how Rhinos appear",
+    "Trigger the described scenario with the Rhino"
+   ],
+   "hint": "Find a Rhino; the description’s joke is the scenario.",
+   "tags": [
+    "missable"
+   ],
    "difficulty": 3,
-   "time": "~30-90 minutes (estimate)",
+   "hours": 1.25,
+   "minutes": 75,
    "phase": "p4",
-   "missable": "Possibly missable if tank access depends on a location or event that is not always present; that is an unverified possibility rather than a claim. Hunt for the Rhino during free-roam with the airport and military areas as first guesses, and treat any found access as worth saving before use."
+   "requires": [],
+   "missable": "Treat as missable by default: if Rhino access depends on a location or event that is not always present, the opportunity could pass. That is an unverified possibility, so treat any found access as worth saving first.",
+   "verification": "The notification fires when the described scenario plays out with the Rhino."
   },
   {
    "id": 39,
    "name": "Sneakthief",
    "description": "Rob a jewelry store without being detected.",
    "grade": "bronze",
-   "guide": "Rob a jewelry store without being detected. Study the store's guards and camera layout before acting, take a slow approach, and use the stealth tools the game offers to stay unseen through the whole robbery. If a plan collapses, restart the attempt rather than pushing a detected run to completion, since a detected robbery earns money but not the trophy.",
-   "hint": "A clean, unseen jewelry robbery from entry to exit.",
+   "guide": "An undetected jewelry robbery is a stealth run, and the atlas rule is to study before acting: guards, cameras, timing. Move slowly through the whole robbery and use the stealth tools rather than improvising under pressure. If a plan collapses, restart the attempt instead of pushing a detected run to the end, because a detected robbery pays money but not the trophy. One clean pass from entry to exit is the goal.",
+   "steps": [
+    "Study the store’s guards and cameras first",
+    "Take a slow approach through the robbery",
+    "Restart the attempt if detection happens"
+   ],
+   "hint": "Entry to exit, unseen.",
    "tags": [
     "missable"
    ],
    "difficulty": 3,
-   "time": "~30-60 minutes (estimate)",
+   "hours": 1,
+   "minutes": 60,
    "phase": "p4",
-   "missable": "Tagged missable as a conservative default: if the jewelry robbery is a one-time scripted opportunity rather than a repeatable activity, an unseen run failed today might not be reattemptable tomorrow. The description does not say whether it repeats, so treat the first solid chance as the one to take seriously."
+   "requires": [],
+   "missable": "Treat as missable by default: if the robbery is a one-time scripted opportunity rather than a repeatable activity, a failed chance might not return. The description does not say whether it repeats, so take the first solid chance seriously.",
+   "verification": "The notification fires at the robbery’s clean completion; any detection voids the attempt."
   },
   {
    "id": 40,
    "name": "Maximum Withdrawal",
    "description": "Rob 5 Bank Vaults and escape.",
    "grade": "silver",
-   "guide": "Rob five bank vaults and escape each time, a silver trophy that is a volume version of the heist loop. Bank vault robberies are presumably repeatable activities, though their exact availability is not verified, so look for vault opportunities in the world and in the crime activity lists. The escape is part of each count by the wording, so do not consider a robbery done until you are clear of the heat.",
-   "hint": "Five vault robberies, five clean escapes.",
+   "guide": "Five vault robberies with escapes is the heist loop at volume, and the atlas notes that the escape is part of the count by the wording: a robbery is not done until you are clear. Find vault opportunities in the world and the crime lists, run them one at a time, and never skip the getaway. The silver grade reflects the repetition. The fifth clean escape fires the unlock.",
+   "steps": [
+    "Find vault robbery opportunities",
+    "Complete each robbery",
+    "Escape the heat each time before counting it"
+   ],
+   "hint": "Five vaults, five clean escapes.",
    "tags": [],
    "difficulty": 3,
-   "time": "~2-4 hours (estimate)",
+   "hours": 2.5,
+   "minutes": 150,
    "phase": "p4",
-   "missable": "Not expected to be missable, assuming vault robberies repeat; that assumption is flagged because the description does not confirm it. If vaults turn out to be limited events, treat this trophy as one to plan around rather than grind."
+   "requires": [],
+   "missable": "No missable risk identified, assuming vault robberies repeat; that assumption is flagged because the description does not confirm it. If vaults turn out to be limited events, plan this one early.",
+   "verification": "Count completed robbery-plus-escape runs yourself; the notification fires on the fifth."
   },
   {
    "id": 41,
    "name": "A Classic Blitz Play",
    "description": "Rob an Armored Truck and escape.",
    "grade": "bronze",
-   "guide": "Rob an armored truck and escape. Armored trucks move on routes, so intercept one, take the heist opportunity it presents, and get out clean. Because the escape is explicitly part of the trophy, plan the getaway vehicle before the ambush rather than improvising one with the alarm already ringing.",
-   "hint": "Intercept an armored truck on its route and escape clean.",
+   "guide": "An armored truck robbery with escape is a single clean job, and the atlas advice is preparation: pick the interception point on a route you have watched, and stage the getaway vehicle before the alarm sounds. The escape is explicitly part of the trophy, so the plan matters more than the ambush. One successful job is the whole requirement.",
+   "steps": [
+    "Find an armored truck on its route",
+    "Stop it and take the robbery opportunity",
+    "Escape clean with a pre-planned getaway"
+   ],
+   "hint": "Intercept on the route, escape with a plan.",
    "tags": [],
    "difficulty": 2,
-   "time": "~30-60 minutes (estimate)",
+   "hours": 0.75,
+   "minutes": 45,
    "phase": "p4",
-   "missable": "Not expected to be missable, since armored trucks presumably keep patrolling. If interception difficulty scales with equipment you own, do this after arming up rather than during the early story."
+   "requires": [],
+   "missable": "No missable risk identified: trucks presumably keep patrolling. If interception difficulty scales with your equipment, do this after arming up.",
+   "verification": "The notification fires once the escape completes after the robbery."
   },
   {
    "id": 42,
    "name": "The Goodtime State",
    "description": "Explore all of Leonida.",
    "grade": "bronze",
-   "guide": "Explore all of Leonida; the starter's notes count 52 areas. Exploration trophies usually unlock per area as you set foot in them, so sweep the map edge to edge, including the towns, trails and waterways that are easy to skip. Keep an eye on the map's coverage indicators and tick off regions you have covered so the last few areas are a targeted drive, not a blind search.",
-   "hint": "52 areas; sweep the map edges and water first.",
+   "guide": "Exploring all of Leonida is a coverage trophy, and the atlas plans it as a systematic sweep rather than wandering: edges, water and the small towns that sit between destinations are the classic gaps. Use the map’s coverage indicators to see what is missing and turn the endgame into a targeted drive. The unlock fires when the last area registers. Pair it with the other map-sweep work to share the driving.",
+   "steps": [
+    "Sweep the map edge to edge",
+    "Cover towns, trails and waterways deliberately",
+    "Target the last areas with the coverage display"
+   ],
+   "hint": "Sweep edges and water first; the map shows coverage.",
    "tags": [
     "collectible"
    ],
    "difficulty": 3,
-   "time": "~3-5 hours (estimate)",
+   "hours": 4,
+   "minutes": 240,
    "phase": "p7",
-   "missable": "Not expected to be missable, since the world is always explorable. The 52-area count comes from the starter's notes and is not independently verified; the in-game map's own coverage display is the authority."
+   "requires": [],
+   "missable": "No missable risk identified: the world stays explorable. The area count is whatever the in-game map tracks.",
+   "verification": "The in-game coverage display reaching full, followed by the notification."
   },
   {
    "id": 43,
    "name": "Pest Control",
    "description": "Rob an Illegal Operation belonging to each gang.",
    "grade": "bronze",
-   "guide": "Rob an illegal operation belonging to each gang; the starter's notes count nine gangs. Illegal operations are presumably marked or discoverable in gang territories, so rotate through each gang's area and rob one of their operations. Because the trophy cares about variety rather than volume, one robbery per gang is enough, which makes route planning worth more than grind here.",
-   "hint": "One robbery per gang, nine gangs in total.",
+   "guide": "Robbing one illegal operation per gang is a variety trophy, and the atlas emphasizes routing over grinding: one job in each territory completes it. Learn where each gang operates, take one operation apiece, and tick the roster as you go. No performance condition applies. The last gang’s robbery fires the unlock.",
+   "steps": [
+    "Identify each gang’s territory",
+    "Find and rob one illegal operation per gang",
+    "Track the roster until every gang is covered"
+   ],
+   "hint": "One robbery per gang; nine territories, nine jobs.",
    "tags": [],
    "difficulty": 3,
-   "time": "~2-3 hours (estimate)",
+   "hours": 2,
+   "minutes": 120,
    "phase": "p4",
-   "missable": "Not expected to be missable, assuming gang operations persist in their territories. Whether a single operation can belong to more than one gang for the count is not verified; spreading the robberies across all nine areas settles it regardless."
+   "requires": [],
+   "missable": "No missable risk identified: gang operations presumably persist in their territories. The roster of gangs is whatever the game tracks; the description asks for each of them.",
+   "verification": "Track the per-gang tally yourself; the notification fires on the last one."
   },
   {
    "id": 44,
    "name": "In The Beginning…",
    "description": "Enjoy a cocktail with a view on Ocean Beach.",
    "grade": "bronze",
-   "guide": "Enjoy a cocktail with a view on Ocean Beach. Find a bar or venue on Ocean Beach, order a cocktail, and stay for the scene while positioned with the view the description implies. This is a low-effort moment trophy; the only uncertainty is which venue qualifies, so try the most obvious beachfront spot first before hunting alternatives.",
-   "hint": "A cocktail at an Ocean Beach venue with the water in view.",
+   "guide": "A cocktail with a view is a moment trophy, and the atlas treats it as a two-minute stop rather than a quest. The only uncertainty is which venue qualifies, so try the most obvious beachfront spot before hunting alternatives. Order the drink, take the seat with the view, and let the moment play. If nothing happens, the next venue along the strip is the next guess.",
+   "steps": [
+    "Find a beachfront venue on Ocean Beach",
+    "Order a cocktail",
+    "Stay positioned with the view while the scene plays"
+   ],
+   "hint": "A cocktail on Ocean Beach, view included.",
    "tags": [
     "missable"
    ],
    "difficulty": 1,
-   "time": "~10-20 minutes (estimate)",
+   "hours": 0.25,
+   "minutes": 15,
    "phase": "p7",
-   "missable": "Tagged missable as a conservative default: if the qualifying venue or the cocktail interaction is tied to a scripted moment or a venue state that changes, the chance could pass. No venue is named in the official description, so this tag means try it early rather than assume the beach waits forever."
+   "requires": [],
+   "missable": "Treat as missable by default: if the qualifying venue or interaction depends on a scripted moment or a venue state that can change, the chance could pass. No venue is named officially, so attempt it early rather than assuming the beach waits.",
+   "verification": "The notification during or shortly after the scene at the qualifying venue."
   },
   {
    "id": 45,
    "name": "Capital Offense",
    "description": "Smash your way out of a vehicle showroom in classic style.",
    "grade": "bronze",
-   "guide": "Smash your way out of a vehicle showroom in classic style. Drive a vehicle through the showroom's glass and out onto the street, which is the classic the wording gestures at. Any showroom you can enter with a car should work; the exact trigger is not verified, so a dramatic full-speed exit through the front glass is the safe interpretation.",
-   "hint": "Drive a car through a showroom's glass to the street.",
+   "guide": "Smashing out of a showroom in classic style is a one-stunt trophy, and the atlas reads the wording literally: a vehicle, a glass front, a dramatic exit onto the street. Any showroom you can enter with a car is a candidate. The exact trigger is not stated, so a full-speed exit through the front glass is the safe interpretation. Thirty seconds of driving, one trophy.",
+   "steps": [
+    "Enter a vehicle showroom with a car",
+    "Line up the glass front",
+    "Drive out through it at speed"
+   ],
+   "hint": "Full speed, through the glass, onto the street.",
    "tags": [
     "missable"
    ],
    "difficulty": 2,
-   "time": "~10-30 minutes (estimate)",
+   "hours": 0.25,
+   "minutes": 15,
    "phase": "p7",
-   "missable": "Tagged missable as a conservative default: if showrooms only open, or only let vehicles in, under certain story or economy states, the stunt's window could close. Nothing confirms that, so the tag means attempt it when you first have a fast car rather than banking on it late."
+   "requires": [],
+   "missable": "Treat as missable by default: if showrooms only open or only admit vehicles under certain story or economy states, the stunt’s window could close. Nothing confirms that, so attempt it when you first have a fast car.",
+   "verification": "The notification at the moment of the glass-shattering exit."
   },
   {
    "id": 46,
    "name": "Let’s Go Bowling",
    "description": "Follow-through at the Kolt & Associates' bowling alley.",
    "grade": "bronze",
-   "guide": "Follow through at the Kolt & Associates' bowling alley. The wording suggests completing a bowling action with a proper follow-through, so play the bowling activity at that alley and finish a throw properly. If a whole game is required, it is a short one; the exact trigger, whether one throw or one game, is not verified.",
-   "hint": "Bowl at the Kolt & Associates alley and finish a proper throw.",
+   "guide": "The bowling follow-through is a venue-moment trophy, and the atlas advice is to visit the named alley and simply bowl properly. Whether the trigger is a single throw or a finished game is not stated, so play until the notification rather than leaving after one ball. It is a short activity either way. The alley does the rest.",
+   "steps": [
+    "Find the Kolt & Associates bowling alley",
+    "Start the bowling activity",
+    "Finish a throw with a proper follow-through"
+   ],
+   "hint": "One proper throw at the named alley.",
    "tags": [
     "missable"
    ],
    "difficulty": 1,
-   "time": "~15-30 minutes (estimate)",
+   "hours": 0.25,
+   "minutes": 15,
    "phase": "p7",
-   "missable": "Tagged missable as a conservative default: a named venue's activity could in principle be tied to a story window, though nothing in the description says so. The tag means visit the alley during your free-roam passes rather than leaving it as a maybe."
+   "requires": [],
+   "missable": "Treat as missable by default: a named venue’s activity could in principle sit behind a story window, though nothing states so. Visit during free-roam passes rather than leaving it as a maybe.",
+   "verification": "The notification during the bowling activity at the named venue."
   },
   {
    "id": 47,
    "name": "Personal Best",
    "description": "A partnership with mass appeal.",
    "grade": "bronze",
-   "guide": "The official description, a partnership with mass appeal, is deliberately vague, so treat this as a scene or moment trophy involving the two protagonists together. Play partner-enabled content and watch for a moment the game frames as notable; the exact trigger is not verified and honest guides should say so. Keep this trophy on your watch list during the partner-focused trophies such as Retail Therapy, since the trigger probably lives in the same content.",
-   "hint": "Something notable done together as a pair; watch partner content.",
+   "guide": "The official wording is deliberately vague, and the atlas says so plainly: this is a scene or moment involving the two leads together, and the trigger is not verified. The practical plan is exposure — play partner-enabled content and watch for moments the game frames with weight. Keep it on the watch list while doing the partner trophies, since the trigger probably lives in that content. When it fires, it will feel obvious in hindsight.",
+   "steps": [
+    "Play partner-enabled content deliberately",
+    "Watch for moments the game frames as notable",
+    "Keep it on the watch list during partner trophies"
+   ],
+   "hint": "Something notable done as a pair; watch partner content.",
    "tags": [
     "missable"
    ],
    "difficulty": 2,
-   "time": "unknown (estimate: alongside partner trophies)",
+   "hours": 0.5,
+   "minutes": 30,
    "phase": "p7",
-   "missable": "Tagged missable because the trigger is genuinely unverified and could be a one-time scene. If it is a scene, missing it would mean a replay or reload; if it is a repeatable activity moment, it is safe. Until one of those is confirmed, treat it as time-sensitive."
+   "requires": [],
+   "missable": "Treat as missable because the trigger is genuinely unverified and could be a one-time scene. If it is a scene, a missed moment means a reload; if it is repeatable, it is safe. Until one of those is confirmed, treat it as time-sensitive.",
+   "verification": "The notification during the qualifying moment; there is no stated counter or checklist."
   },
   {
    "id": 48,
    "name": "Actions Speak Louder",
    "description": "Choices made (for better or worse).",
    "grade": "bronze",
-   "guide": "Choices made, for better or worse, with the starter's notes tracking a count to 500. The game presumably counts story and dialogue choices cumulatively across the playthrough, so simply playing the whole game with its decision points engaged should approach the number. Do not grind this deliberately; let the campaign's choices accumulate and check the tracker late in the run, then sweep whatever repeatable choice points remain.",
-   "hint": "A running count of choices; play naturally and check the total late.",
+   "guide": "A tally of choices made is an accumulation trophy, and the atlas treats it as free if you play attentively: every story and dialogue decision presumably adds to the count. Do not grind it deliberately; instead engage decision points as they come and check the tracker late in the run. If a shortfall remains, sweep whatever repeatable choice points the game still offers. The count itself is the only requirement.",
+   "steps": [
+    "Engage every decision point the story offers",
+    "Let the count accumulate across the campaign",
+    "Check the tracker late and sweep what remains"
+   ],
+   "hint": "A running count; play naturally and check late.",
    "tags": [],
    "difficulty": 3,
-   "time": "accumulates over the whole game (estimate)",
+   "hours": 0,
+   "minutes": 0,
    "phase": "p7",
-   "missable": "Not expected to be missable, since the count accumulates by design. Whether choices made before the tracker existed retroactively count is the kind of detail no description answers; starting the count early in the playthrough removes the question."
+   "requires": [],
+   "missable": "No missable risk identified: the count accumulates by design. Whether pre-tracker choices count retroactively is unverified; engaging decisions from early on removes the question.",
+   "verification": "The in-game counter, wherever the game surfaces it, reaching the stated total."
   },
   {
    "id": 49,
    "name": "Bad Luck, I Guess",
    "description": "Second time's the charm.",
    "grade": "bronze",
-   "guide": "Second time's the charm: succeed on a second try. The natural read is to fail something once and then succeed at it on the next attempt, though the exact scope, meaning which activities qualify, is not verified. Story mission retries are the obvious candidate, so wipe once in a mission you intended to beat anyway and then finish it on the retry.",
+   "guide": "Second time is the charm reads as a joke about resilience: fail once, succeed on the next try. The atlas treats story mission retries as the natural stage, since a wipe followed by a completion is a qualifying pair by the plain reading. Do not engineer failures recklessly; the game will give you one for free eventually. When the pattern happens, the trophy usually announces itself.",
+   "steps": [
+    "Fail an attempt you intended to beat anyway",
+    "Retry it immediately",
+    "Succeed on the second attempt"
+   ],
    "hint": "Fail once, then succeed immediately after.",
    "tags": [
     "missable"
    ],
    "difficulty": 1,
-   "time": "happens naturally during attempts (estimate)",
+   "hours": 0,
+   "minutes": 0,
    "phase": "p5",
-   "missable": "Tagged missable only because the qualifying scope is unverified; if the second try must immediately follow the failure within some window, a lucky first-try player could go a long time without a qualifying pair. In practice any failed attempt followed by a success should settle it."
+   "requires": [],
+   "missable": "Treat as borderline only because the qualifying scope is unverified: if the second try must immediately follow the failure, a lucky first-try player could wait a long time. In practice any failure-then-success pair should settle it.",
+   "verification": "The notification following the qualifying failure-and-success pair."
   },
   {
    "id": 50,
    "name": "The Truth Is Out There",
    "description": "What the hell just happened?",
    "grade": "bronze",
-   "guide": "What the hell just happened? The description implies a strange scripted moment somewhere in the state of Leonida, and the trigger is deliberately mysterious. Keep this trophy in mind during odd encounters and stranger strands, which are the classic home for series weirdness, and treat any surreal scene you trigger as a candidate. Completing the stranger strands is the most sensible sweep for it, since their finales are where the strange lives.",
-   "hint": "A strange scene somewhere in Leonida; the stranger strands are the likely home.",
+   "guide": "What the hell just happened? is a trophy that is also a question, and the atlas’s honest answer is that the trigger is unverified. The classic home for series weirdness is the stranger strands, so this atlas schedules the trophy’s hunt there rather than promising a location. Treat any surreal scene you trigger as the candidate and stay attentive during odd content. When the moment lands, the description makes sense.",
+   "steps": [
+    "Play the stranger strands attentively",
+    "Treat surreal scenes as candidates",
+    "Keep the trophy in mind during odd encounters"
+   ],
+   "hint": "A strange scene somewhere in Leonida; the strands are the likely home.",
    "tags": [
     "missable"
    ],
    "difficulty": 2,
-   "time": "unknown (estimate: during strands)",
+   "hours": 0.5,
+   "minutes": 30,
    "phase": "p5",
-   "missable": "Tagged missable because a scripted strange moment is exactly the kind of trigger that can pass unexperienced. The description names nothing specific, so this tag means stay alert during odd content rather than assume the moment repeats on demand."
+   "requires": [],
+   "missable": "Treat as missable because a scripted strange moment is exactly the kind of trigger that can pass unexperienced. The description names nothing specific, so stay alert during odd content rather than assuming the moment repeats on demand.",
+   "verification": "The notification during the strange scene; there is no stated counter."
   },
   {
    "id": 51,
    "name": "Ten Pin",
    "description": "Bowl 'em over with a melee drive-by.",
    "grade": "bronze",
-   "guide": "Bowl 'em over with a melee drive-by. Drive past a target and land a melee strike from the moving vehicle, ideally near a bowling-themed setting if the pun is literal, though the exact requirement beyond the melee drive-by itself is not verified. Practice the timing on quiet streets first, then take the attempt when the swing feels natural rather than mowing down half a block hoping for physics.",
-   "hint": "A melee strike from a moving vehicle; bowling pins optional.",
+   "guide": "The melee drive-by is a timing stunt: a strike from a moving vehicle, ideally with bowling-themed flair if the pun is literal. The atlas advice is to practice the swing window on empty streets before attempting it in traffic, since the timing is the whole difficulty. The exact requirement beyond the drive-by itself is not stated. One clean hit closes it.",
+   "steps": [
+    "Practice the swing timing on quiet streets",
+    "Drive past a suitable target",
+    "Land the melee strike from the moving vehicle"
+   ],
+   "hint": "A melee strike from a moving vehicle.",
    "tags": [],
    "difficulty": 2,
-   "time": "~15-30 minutes (estimate)",
+   "hours": 0.5,
+   "minutes": 30,
    "phase": "p4",
-   "missable": "Not expected to be missable, since melee drive-bys are presumably always available in free-roam. Whether the strike must connect with a person or can hit an object is not verified; a clean hit on a pedestrian target satisfies the plain reading."
+   "requires": [],
+   "missable": "No missable risk identified: melee drive-bys are presumably always available in free-roam. Whether the strike must hit a person or an object is unverified; a clean hit satisfies the plain reading.",
+   "verification": "The notification on the successful moving-vehicle melee hit."
   },
   {
    "id": 52,
    "name": "Dime on the Dollar",
    "description": "Earn $250,000 laundering Marked Bills through your contacts.",
    "grade": "bronze",
-   "guide": "Launder $250,000 of marked bills through your contacts. Marked bills presumably come from robberies and illegal operations, so route your crime income through the laundering loop until the running total crosses the threshold. The count is cumulative by the wording, so there is no need for a single large laundering session; steady laundering after each job does the work invisibly.",
-   "hint": "Route your marked-bill income through laundering until 250k is cleaned.",
+   "guide": "A quarter of a million laundered is a money-loop trophy, and the atlas habit is to route every batch of marked-bill income through the contacts as it arrives rather than hoarding marked cash. The count is cumulative by the wording, so no single session is required; the loop does the work invisibly while you do the crime phase. Check the running total occasionally. The threshold crossing fires the unlock.",
+   "steps": [
+    "Collect marked bills from crime income",
+    "Route each batch through the laundering contacts",
+    "Let the running total pass $250,000"
+   ],
+   "hint": "Launder everything as you earn it.",
    "tags": [],
    "difficulty": 2,
-   "time": "~1-3 hours across the campaign (estimate)",
-   "phase": "p4",
-   "missable": "Not expected to be missable, since laundering is presumably a repeatable loop. Whether the $250,000 counts bills laundered or profit received is not verified; the safest habit is to keep laundering everything you take rather than hoarding marked cash."
+   "hours": 2,
+   "minutes": 120,
+   "phase": "p7",
+   "requires": [],
+   "missable": "No missable risk identified: laundering is presumably a repeatable loop. Whether the figure counts bills laundered or profit received is unverified; laundering everything you take satisfies both.",
+   "verification": "The laundering total in the relevant menu; the notification fires at the threshold."
   },
   {
    "id": 53,
    "name": "Treat Yo Self",
    "description": "Spend $100,000 across all shops.",
    "grade": "bronze",
-   "guide": "Spend $100,000 across all shops. Buy clothes, weapons, vehicles, food and anything else the shops sell; the wording says across all shops, which may mean shops of every type or simply the aggregate total, and the exact reading is not verified. Either way, regular shopping across the campaign reaches the number naturally, so buy what you need when you need it and the total takes care of itself.",
-   "hint": "Buy widely across the shop types until 100k is spent.",
+   "guide": "One hundred thousand spent across all shops is a shopping aggregate, and the atlas treats it as the most passive trophy on the list: clothes, weapons, vehicles, food, whatever you would buy anyway. The wording’s phrase across all shops may mean every shop type or simply the aggregate; splitting purchases across categories satisfies both readings. Regular play reaches the figure without effort. The total crossing fires the unlock.",
+   "steps": [
+    "Buy what you need across every shop type",
+    "Track the aggregate spend",
+    "Let routine shopping close the total"
+   ],
+   "hint": "Buy widely across shop types until the total lands.",
    "tags": [],
    "difficulty": 1,
-   "time": "~1-2 hours across the campaign (estimate)",
-   "phase": "p4",
-   "missable": "Not expected to be missable, since shops persist and money is renewable. The ambiguity between every shop type and any shops is flagged honestly here; splitting purchases across categories satisfies both readings."
+   "hours": 1.5,
+   "minutes": 90,
+   "phase": "p7",
+   "requires": [],
+   "missable": "No missable risk identified: shops persist and money is renewable. The reading ambiguity is flagged honestly; category-spread shopping is the safe play.",
+   "verification": "The aggregate spend in the relevant stats; the notification fires at the threshold."
   },
   {
    "id": 54,
    "name": "Little Boxes",
    "description": "Purchase all garage properties.",
    "grade": "bronze",
-   "guide": "Purchase all garage properties; the starter's notes count 8. Garages cost real money, so either save across the campaign or fund them with laundered income from the marked-bills loop in the street crime phase. Buy them as you unlock each district so the purchase spread stays even, and keep the in-game property list as your checklist rather than trusting memory.",
-   "hint": "All 8 garages; fund them with the laundering loop.",
+   "guide": "Owning every garage is a property sweep, and the atlas pairs it with the laundering loop so the funding question answers itself: crime income buys real estate. Purchase each garage as its district opens so the spend stays spread rather than stacked at the end. The in-game property list is the checklist, not memory. The last purchase fires the unlock.",
+   "steps": [
+    "Identify all garage properties",
+    "Fund purchases with laundering income",
+    "Buy each as its district unlocks"
+   ],
+   "hint": "Every garage, funded by the laundering loop.",
    "tags": [
     "collectible"
    ],
    "difficulty": 2,
-   "time": "~2-4 hours including earning the cash (estimate)",
+   "hours": 2.5,
+   "minutes": 150,
    "phase": "p7",
-   "missable": "Not expected to be missable, since property purchases persist once made. The 8-garage count comes from the starter's notes and is not independently verified; the in-game property menu is the authority on what remains."
+   "requires": [],
+   "missable": "No missable risk identified: purchases persist once made. The garage count is whatever the in-game property menu lists.",
+   "verification": "The property menu shows each garage owned; the notification fires on the last one."
   },
   {
    "id": 55,
    "name": "On the Spot",
    "description": "Register 10 vehicles to the Scooter Bros app.",
    "grade": "bronze",
-   "guide": "Register 10 vehicles to the Scooter Bros app. Open the app and register vehicles you have access to; ten registrations is a short task once you know where the app lives on the phone. Any ten vehicles should do by the wording, so use whatever you are driving across a free-roam session and let the app's own counter confirm the total.",
-   "hint": "Register any 10 vehicles in the Scooter Bros phone app.",
+   "guide": "Ten registrations in the Scooter Bros app is a short errand once you know where the app lives. Register whatever you are currently driving during a free-roam session; the wording asks for ten vehicles, not ten specific ones. The app’s own counter confirms the total. A quarter-hour, one trophy.",
+   "steps": [
+    "Open the Scooter Bros app on the phone",
+    "Register the vehicle you are driving",
+    "Repeat across any ten vehicles"
+   ],
+   "hint": "Any ten vehicles, registered in the app.",
    "tags": [],
    "difficulty": 1,
-   "time": "~15-30 minutes (estimate)",
+   "hours": 0.25,
+   "minutes": 15,
    "phase": "p7",
-   "missable": "Not expected to be missable, since the app is part of the phone's permanent toolset. Whether a vehicle must be owned or merely driven to register is not verified; registering whatever you are currently driving satisfies the plain wording either way."
+   "requires": [],
+   "missable": "No missable risk identified: the app is part of the phone’s permanent toolset. Whether the vehicle must be owned or merely driven is unverified; registering what you drive satisfies the plain wording.",
+   "verification": "The app’s registration counter; the notification fires at ten."
   }
  ]
 }
