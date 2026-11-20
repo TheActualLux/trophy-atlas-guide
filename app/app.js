@@ -16,6 +16,7 @@ const state = {
   filters: new Set(),
   sort: 'id',
   selected: 0, // index into the currently filtered trophy list
+  focusSearchOnce: false, // set by the / shortcut before navigating; consumed by route()
 };
 
 // ---------- small helpers ----------
@@ -152,6 +153,11 @@ function route() {
   if (r.view !== 'dossier') lastList = r.view;
   if (r.view === 'route' && !location.hash) history.replaceState(null, '', '#route');
   render();
+  if (state.focusSearchOnce) {
+    state.focusSearchOnce = false;
+    const s = document.getElementById('search');
+    if (s) s.focus();
+  }
   window.scrollTo(0, 0);
 }
 
@@ -446,7 +452,7 @@ function resetProgress() {
 
 document.addEventListener('keydown', (e) => {
   const tag = (e.target.tagName || '').toLowerCase();
-  const typing = tag === 'input' || tag === 'textarea' || tag === 'select';
+  const typing = tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable === true;
 
   if (e.key === 'Escape') {
     if (typing) { e.target.blur(); }
@@ -458,13 +464,14 @@ document.addEventListener('keydown', (e) => {
 
   if (e.key === '/') {
     e.preventDefault();
-    if (state.view !== 'trophies') navigate('#trophies');
-    const focusSearch = () => {
+    if (state.view !== 'trophies') {
+      // Focus deterministically after the hashchange render lands, not from a timer.
+      state.focusSearchOnce = true;
+      navigate('#trophies');
+    } else {
       const s = document.getElementById('search');
       if (s) s.focus();
-    };
-    requestAnimationFrame(focusSearch);
-    setTimeout(focusSearch, 80); // hashchange render can land after rAF
+    }
     return;
   }
   if (e.key === 's' || e.key === 'S') {
