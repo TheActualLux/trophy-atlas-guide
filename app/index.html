@@ -1,38 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trophy Atlas — GTA VI Trophy Guide</title>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111817">
+  <meta name="description" content="A route planner and trophy dossiers for Grand Theft Auto VI on PlayStation 5.">
+  <title>Trophy Atlas — Grand Theft Auto VI</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="#route">Trophy Atlas</a>
-  <span class="platform">GTA VI · PS5 Platinum</span>
-  <div class="top-progress">
-    <span class="earned" id="earned">0/55 earned</span>
-    <span class="segments" id="segments" title="Progress by grade"></span>
-    <span class="hours" id="hours-left">≈ — h remaining</span>
-  </div>
-  <nav class="tabs" id="tabs">
-    <a href="#route" id="tab-route">Route</a>
-    <a href="#trophies" id="tab-trophies">Trophies</a>
-  </nav>
-  <div class="top-actions">
-    <label class="switch" title="Reveal spoiler-free hints (s)">
-      <input type="checkbox" id="spoilers">
-      <span>Spoilers</span>
-    </label>
-    <button type="button" id="export-btn" title="Export progress as JSON">Export</button>
-    <button type="button" id="import-btn" title="Import progress JSON">Import</button>
-    <button type="button" id="reset-btn" title="Clear all ticks">Reset</button>
-    <input type="file" id="import-file" accept="application/json,.json" hidden>
-  </div>
-</header>
-<main id="app"></main>
-<div id="status" class="status" role="status" aria-live="polite"></div>
-<noscript><p class="noscript">This atlas needs JavaScript to render its route and dossier.</p></noscript>
-<script type="module" src="./app.js"></script>
+  <header class="masthead">
+    <a class="wordmark" href="#route" aria-label="Trophy Atlas home"><span class="mark">TA</span><span>Trophy Atlas</span></a>
+    <p class="platform-note">GRAND THEFT AUTO VI <span>·</span> PLAYSTATION 5</p>
+    <div class="overall" aria-label="Overall progress">
+      <span id="earned-count">0 / 55</span>
+      <span class="overall-bar"><i id="overall-fill"></i></span>
+      <span id="remaining-time">time left —</span>
+    </div>
+    <nav class="view-nav" aria-label="Guide views">
+      <a href="#route" id="route-tab">Route</a>
+      <a href="#trophies" id="trophies-tab">Trophies</a>
+    </nav>
+    <div class="tools">
+      <label class="spoiler-control"><input id="spoilers" type="checkbox"><span>Spoilers</span></label>
+      <button id="export" type="button">Export</button>
+      <button id="import" type="button">Import</button>
+      <button id="reset" type="button">Reset</button>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+    </div>
+  </header>
+  <main id="app" tabindex="-1" aria-live="polite"></main>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <noscript>This route atlas needs JavaScript enabled to display its guide.</noscript>
+  <script type="module" src="./app.js"></script>
 </body>
 </html>

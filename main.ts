@@ -1,156 +1,118 @@
-// Trophy Atlas packager. Reads the trophy data, refuses anything malformed, then copies
-// app/ and screenshots/ into the output directory and writes a dossier.json summary.
-// Node built-ins only; run with: MAKEFUN_OUTPUT_DIR=out node main.ts
-
+// Validate the authored trophy guide, then package its static app and screenshot evidence.
+// Run with: MAKEFUN_OUTPUT_DIR=out node main.ts
 import { cpSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
 
-const ROOT = dirname(fileURLToPath(new URL(import.meta.url)));
-const DATA_FILE = join(ROOT, 'app', 'data', 'trophies.json');
-const SCREENSHOTS_DIR = join(ROOT, 'screenshots');
-const MAX_SCREENSHOTS = 4;
-const MAX_SCREENSHOT_BYTES = 262144;
-const GRADES = ['platinum', 'gold', 'silver', 'bronze'] as const;
+const root = dirname(fileURLToPath(import.meta.url));
+const dataPath = join(root, 'app', 'data', 'trophies.json');
+const imageFolder = join(root, 'screenshots');
+const validGrades = new Set(['platinum', 'gold', 'silver', 'bronze']);
+const imageLimit = 262144;
 
-type Grade = (typeof GRADES)[number];
-
-interface Trophy {
-  id: number;
-  name: string;
-  description: string;
-  grade: string;
-  guide: string;
-  steps: string[];
-  hint: string;
-  verification: string;
-  hours: number;
-  [key: string]: unknown;
-}
-
-interface TrophyData {
-  game: string;
-  platform: string;
-  phases: Array<{ id: string; name: string; goal?: string; about?: string; trophies: number[] }>;
-  trophies: Trophy[];
-}
-
-interface Screenshot {
-  file: string;
-  bytes: number;
-}
-
-function fail(message: string): never {
-  console.error('refusing to package: ' + message);
+function refuse(reason: string): never {
+  console.error(`Build refused: ${reason}`);
   process.exit(1);
 }
 
-function countSentences(text: string): number {
-  return (text.replace(/\.\.\./g, '…').match(/[.!?…](\s|$)/g) ?? []).length;
+function requireText(value: unknown, where: string): asserts value is string {
+  if (typeof value !== 'string' || value.trim().length === 0) refuse(`${where} must be non-empty text`);
 }
 
-// Reads and fully validates the trophy data before anything is copied anywhere.
-function readTrophies(): TrophyData {
-  let raw: string;
+function sentenceCount(value: string): number {
+  return (value.replace(/\.\.\./g, '…').match(/[.!?…](?=\s|$)/g) ?? []).length;
+}
+
+function validateTrophies(): any {
+  let parsed: unknown;
   try {
-    raw = readFileSync(DATA_FILE, 'utf8');
-  } catch (err) {
-    fail('cannot read ' + DATA_FILE + ' (' + (err as Error).message + ')');
+    parsed = JSON.parse(readFileSync(dataPath, 'utf8'));
+  } catch (error) {
+    refuse(`cannot read valid JSON from app/data/trophies.json (${(error as Error).message})`);
   }
-  let data: TrophyData;
-  try {
-    data = JSON.parse(raw) as TrophyData;
-  } catch (err) {
-    fail('invalid JSON in trophies.json (' + (err as Error).message + ')');
+  if (!parsed || typeof parsed !== 'object' || !Array.isArray((parsed as any).trophies)) {
+    refuse('app/data/trophies.json must contain a trophies array');
   }
-  if (!data || typeof data !== 'object' || !Array.isArray(data.trophies)) {
-    fail('trophies.json has no trophies array');
+  const data = parsed as { phases?: unknown; trophies: any[] };
+  if (data.trophies.length !== 55) refuse(`expected 55 trophies, found ${data.trophies.length}`);
+  const knownIds = new Set<number>();
+  for (const trophy of data.trophies) {
+    const label = `trophy ${String(trophy?.id ?? '?')}`;
+    if (!Number.isInteger(trophy?.id) || trophy.id < 1 || trophy.id > 55) refuse(`${label} has an invalid ID`);
+    if (knownIds.has(trophy.id)) refuse(`${label} repeats an ID`);
+    knownIds.add(trophy.id);
+    requireText(trophy.name, `${label} name`);
+    requireText(trophy.description, `${label} description`);
+    if (!validGrades.has(trophy.grade)) refuse(`${label} has an invalid grade`);
+    if (!Array.isArray(trophy.tags) || trophy.tags.some((tag: unknown) => typeof tag !== 'string' || !tag.trim())) refuse(`${label} needs non-empty tags`);
+    if (!Number.isInteger(trophy.difficulty) || trophy.difficulty < 1 || trophy.difficulty > 5) refuse(`${label} difficulty must be 1–5`);
+    if (typeof trophy.hours !== 'number' || !Number.isFinite(trophy.hours) || trophy.hours < 0) refuse(`${label} has an invalid time estimate`);
+    requireText(trophy.missable, `${label} missable note`);
+    requireText(trophy.requires, `${label} prerequisites`);
+    if (!Array.isArray(trophy.steps) || trophy.steps.length < 3) refuse(`${label} needs at least three numbered steps`);
+    for (const [index, step] of trophy.steps.entries()) requireText(step, `${label} step ${index + 1}`);
+    requireText(trophy.guide, `${label} guide`);
+    if (sentenceCount(trophy.guide) < 3) refuse(`${label} guide needs at least three sentences`);
+    requireText(trophy.hint, `${label} hint`);
+    requireText(trophy.verification, `${label} verification`);
+    if (!Array.isArray(trophy.sources) || trophy.sources.length === 0) refuse(`${label} needs at least one source`);
+    for (const [index, source] of trophy.sources.entries()) requireText(source, `${label} source ${index + 1}`);
+    requireText(trophy.phase, `${label} phase`);
   }
-  const ids = new Set<number>();
-  for (const t of data.trophies) {
-    const label = 'trophy ' + (typeof t.id === 'number' ? 't' + t.id : JSON.stringify(t.id ?? t));
-    if (!Number.isInteger(t.id) || (t.id as number) < 1) fail(label + ': missing or invalid id');
-    if (ids.has(t.id)) fail(label + ': duplicate id');
-    ids.add(t.id);
-    if (typeof t.name !== 'string' || !t.name.trim()) fail(label + ': missing name');
-    if (typeof t.description !== 'string' || !t.description.trim()) fail(label + ': missing description');
-    if (typeof t.grade !== 'string' || !(GRADES as readonly string[]).includes(t.grade)) {
-      fail(label + ': missing or unknown grade ' + JSON.stringify(t.grade));
+  if (!Array.isArray(data.phases) || data.phases.length !== 8) refuse('the route must have exactly eight phases');
+  const placements: number[] = [];
+  const phaseIds = new Set<string>();
+  for (const [index, phase] of (data.phases as any[]).entries()) {
+    requireText(phase?.id, `phase ${index + 1} id`);
+    requireText(phase?.name, `phase ${index + 1} name`);
+    requireText(phase?.goal, `phase ${index + 1} objective`);
+    requireText(phase?.about, `phase ${index + 1} route note`);
+    if (phaseIds.has(phase.id)) refuse(`phase ${phase.id} repeats an ID`);
+    phaseIds.add(phase.id);
+    if (!Array.isArray(phase.trophies) || phase.trophies.length === 0) refuse(`phase ${phase.id} has no trophies`);
+    for (const id of phase.trophies) {
+      if (!knownIds.has(id)) refuse(`phase ${phase.id} refers to unknown trophy ${String(id)}`);
+      placements.push(id);
     }
-    if (!Array.isArray(t.steps) || t.steps.length < 3 || t.steps.some((s) => typeof s !== 'string' || !s.trim())) {
-      fail(label + ': guide steps missing or fewer than 3');
-    }
-    if (typeof t.guide !== 'string' || countSentences(t.guide) < 3) {
-      fail(label + ': guide paragraph has fewer than 3 sentences');
-    }
-    if (typeof t.hint !== 'string' || !t.hint.trim()) fail(label + ': missing hint');
-    if (typeof t.verification !== 'string' || !t.verification.trim()) fail(label + ': missing verification');
-    if (typeof t.hours !== 'number' || t.hours < 0) fail(label + ': missing or invalid hours');
   }
-  if (!Array.isArray(data.phases) || data.phases.length === 0) fail('trophies.json has no phases');
-  for (const p of data.phases) {
-    if (typeof p.id !== 'string' || !Array.isArray(p.trophies)) fail('phase ' + JSON.stringify(p.id) + ': missing id or trophies');
-    for (const id of p.trophies) if (!ids.has(id)) fail('phase ' + p.id + ': unknown trophy t' + id);
-  }
+  if (placements.length !== 55 || new Set(placements).size !== 55) refuse('each trophy must appear in exactly one route phase');
+  for (const trophy of data.trophies) if (!phaseIds.has(trophy.phase)) refuse(`trophy ${trophy.id} refers to unknown phase ${trophy.phase}`);
   return data;
 }
 
-// Screenshots are evidence, not product: count and size limits are enforced before copying.
-function readScreenshots(): Screenshot[] {
-  let files: string[];
+function validateScreenshots(): Array<{ name: string; size: number }> {
+  let names: string[];
   try {
-    files = readdirSync(SCREENSHOTS_DIR).filter((f) => /\.(jpe?g|png)$/i.test(f)).sort();
-  } catch (err) {
-    fail('cannot read screenshots directory (' + (err as Error).message + ')');
+    names = readdirSync(imageFolder).filter((name) => /\.(?:png|jpe?g)$/i.test(name)).sort();
+  } catch (error) {
+    refuse(`cannot read screenshots directory (${(error as Error).message})`);
   }
-  if (files.length > MAX_SCREENSHOTS) {
-    fail('screenshots directory has ' + files.length + ' images; more than ' + MAX_SCREENSHOTS + ' is not allowed');
-  }
-  return files.map((file) => {
-    const bytes = statSync(join(SCREENSHOTS_DIR, file)).size;
-    if (bytes > MAX_SCREENSHOT_BYTES) {
-      fail(file + ' is ' + bytes + ' bytes; over the ' + MAX_SCREENSHOT_BYTES + '-byte limit');
-    }
-    return { file, bytes };
+  if (names.length < 3 || names.length > 4) refuse(`screenshots must contain 3–4 PNG/JPEG images; found ${names.length}`);
+  return names.map((name) => {
+    const size = statSync(join(imageFolder, name)).size;
+    if (size > imageLimit) refuse(`${name} is ${size} bytes; maximum is ${imageLimit}`);
+    return { name, size };
   });
 }
 
-// The console report: grade counts and the hour estimate the route totals.
-function summarize(data: TrophyData) {
-  const counts: Record<Grade, number> = { platinum: 0, gold: 0, silver: 0, bronze: 0 };
-  for (const t of data.trophies) counts[t.grade as Grade]++;
-  const hours = Math.round(data.trophies.reduce((sum, t) => sum + (t.hours as number), 0) * 100) / 100;
-  return { counts, hours, total: data.trophies.length, phases: data.phases.length };
-}
-
-// dossier.json is the vendored library's own output: the scorer builds it again from app/
-// and screenshots/ and compares the two byte for byte, so nothing else may write it.
-function writeDossier(dir: string): number {
-  const bytes = buildDossier(dir, {
-    text_max_bytes: 163840,
-    screenshots: { max: 4, max_bytes: 262144 },
-    app_max_files: 993,
-    app_max_bytes: 50331648,
-  });
-  writeFileSync(join(dir, 'dossier.json'), bytes);
-  return statSync(join(dir, 'dossier.json')).size;
-}
-
-const outputDir = resolve(ROOT, process.env.MAKEFUN_OUTPUT_DIR || 'out');
-const data = readTrophies();
-const screenshots = readScreenshots();
-
+const data = validateTrophies();
+const screenshots = validateScreenshots();
+const outputDir = resolve(root, process.env.MAKEFUN_OUTPUT_DIR || 'out');
 mkdirSync(outputDir, { recursive: true });
-cpSync(join(ROOT, 'app'), join(outputDir, 'app'), { recursive: true });
-cpSync(SCREENSHOTS_DIR, join(outputDir, 'screenshots'), { recursive: true });
+cpSync(join(root, 'app'), join(outputDir, 'app'), { recursive: true });
+cpSync(imageFolder, join(outputDir, 'screenshots'), { recursive: true });
 
-const dossierBytes = writeDossier(outputDir);
-const summary = summarize(data);
-const gradeLine = GRADES.map((g) => g + ' ' + summary.counts[g]).join(', ');
+const dossierBytes = buildDossier(outputDir, {
+  text_max_bytes: 163840,
+  screenshots: { max: 4, max_bytes: 262144 },
+  app_max_files: 993,
+  app_max_bytes: 50331648,
+});
+writeFileSync(join(outputDir, 'dossier.json'), dossierBytes);
 
-console.log('packaged ' + summary.total + ' trophies (' + gradeLine + ')');
-console.log('phases ' + summary.phases + ', estimated total hours \u2248 ' + summary.hours);
-console.log('screenshots found: ' + (screenshots.length ? screenshots.map((s) => s.file).join(', ') : 'none'));
-console.log('dossier.json written: ' + dossierBytes + ' bytes');
-console.log('output: ' + outputDir);
+const grades = Object.fromEntries([...validGrades].map((grade) => [grade, data.trophies.filter((trophy: any) => trophy.grade === grade).length]));
+const totalHours = data.trophies.reduce((sum: number, trophy: any) => sum + trophy.hours, 0);
+console.log(`Packaged ${data.trophies.length} trophies in ${data.phases.length} route phases (${Object.entries(grades).map(([grade, count]) => `${grade} ${count}`).join(', ')}).`);
+console.log(`Screenshots: ${screenshots.length}; dossier.json: ${dossierBytes.length} bytes; estimated route total: ${totalHours} hours.`);
+console.log(`Output: ${outputDir}`);

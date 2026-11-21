@@ -2,68 +2,41 @@
 [![rank](https://make.fun/badge/gta6-trophy-guide-01/TheActualLux/trophy-atlas-guide/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 [![reward](https://make.fun/badge/gta6-trophy-guide-01/TheActualLux/trophy-atlas-guide/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 
-# Trophy Atlas — a Grand Theft Auto VI trophy guide for the PS5 platinum
+# Trophy Atlas — Grand Theft Auto VI
 
-Trophy Atlas is a plain, static trophy guide built around two ideas: a **route** that walks the
-fifty-five trophies phase by phase, and a **dossier** that documents every individual trophy.
-It ships as three hand-written files (HTML, CSS, JavaScript), a trophy data file, and a small
-packaging script. There are no libraries, no build step, no network calls, no webfonts and no
-images in the interface itself.
+Trophy Atlas is a static, offline-friendly route planner and trophy dossier for the 55-entry Grand Theft Auto VI trophy list supplied with this project’s kit. It pairs an eight-phase platinum route with an individually expandable dossier for every trophy. Official names, descriptions, and grades are kept distinct from the original route advice and editorial time and difficulty estimates.
 
-## What the atlas does
+## Features
 
-- **Top bar progress** — earned count out of 55, progress bars segmented by grade, and an
-  estimate of remaining hours recalculated from your own ticks.
-- **Route view** — eight phase cards in a deliberate order: story first, then street work,
-  stranger strands, activities, and the long collection tail. Each card carries a one-line
-  objective, the reasoning behind its place in the route, per-phase progress, an estimated
-  hour cost, and tickable chips for every trophy in it.
-- **Trophy dossier** — open any trophy through its route chip, the trophies list, `#t<id>`
-  in the URL, or `?expand=<id>`. Each dossier records the official name, description and
-  grade, plus difficulty dots, an estimated time in hours and minutes, a missable warning
-  where the scenario warrants one, a numbered step list, a guide paragraph, a spoiler-free
-  hint (revealed by the Spoilers switch), prerequisites, how to verify the unlock, links to
-  the previous and next trophies, and a jump back to the owning phase.
-- **Trophies view** — searchable across names, descriptions and guide text with highlighted
-  matches, filterable by grade and by missable / collectible / story-critical / online tags,
-  sortable by id, grade, name or difficulty.
-- **Local progress** — ticks persist in `localStorage`, export and import as JSON, and a
-  reset button that asks before it deletes.
-- **Keyboard** — `/` jumps to search, `Escape` clears or closes, `s` toggles the Spoilers
-  switch, `j`/`k` move through the trophies list, `Enter` opens the selected trophy.
-- **Routing** — `#route`, `#trophies` and `#t<id>` are real hash routes, so browser back and
-  forward behave the way you expect.
+- Eight route phases, each with an objective, an explanation of the ordering, its trophy chips, progress bar, and combined estimated hours.
+- Searchable trophy list that matches names, official descriptions, and guide text, with highlighted matches, grade and tag filters, sorting, and inline dossier expansion.
+- Individual dossiers with grade, tags, 1–5 difficulty, time estimate, missable note, numbered steps, a multi-sentence guide, spoiler-gated hint, prerequisites, verification, sources, and previous/next links.
+- Browser-local checklist ticks, progress export/import, and a confirmation before resetting.
+- Hash routes for `#route`, `#trophies`, and `#t<ID>`; `?expand=<ID>` opens a dossier. Browser back/forward follows route changes.
+- Keyboard shortcuts: `/` focuses search, `S` switches spoiler hints, `J`/`K` move the trophy selection, `Enter` opens the selected dossier, and `Escape` clears search or returns from a dossier.
 
-## Running it
+The interface uses plain HTML, CSS, and ES modules. It has no runtime library, build step, network request, webfont, or image dependency. Checklist state is stored in this browser’s localStorage.
 
-Any static file server pointed at `app/` works. The repository includes a tiny one:
+## Run locally
 
-```
-node serve.ts --port 8080
+From the repository root, start the included static server on port 8094:
+
+```sh
+node serve.ts --port 8094
 ```
 
-To package the guide (validates the trophy data first, then copies `app/` and `screenshots/`
-into the output directory and writes a `dossier.json` summary):
+Open `http://127.0.0.1:8094/`. The server serves `app/` directly; the app loads its local data file with a relative URL.
 
-```
+## Validate and package
+
+Node 22 or newer runs the TypeScript entry point directly using Node’s built-in type stripping. The packager validates the 55 trophy dossiers, eight route phases, and three-to-four screenshot evidence files (each at most 262,144 bytes), copies `app/` and `screenshots/`, and asks the vendored `buildDossier` function to write `dossier.json`.
+
+```sh
 MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-Both scripts use only Node built-ins and were written against Node 22+.
+If `MAKEFUN_OUTPUT_DIR` is omitted, output is written to `out/` in the project directory.
 
-## Data honesty
+## Data and estimates
 
-The trophy list — ids, names, descriptions and grades — is the official 55-trophy list and is
-preserved verbatim in `app/data/trophies.json`. Everything around it is original guide writing
-for this atlas: the phase order, step lists, hour estimates, difficulty ratings, prerequisite
-graph and scenario interpretations. Where the official wording does not settle a question
-(replay behavior, exact counts, trigger details), the guide says so instead of guessing, and
-the in-game trackers are treated as the only authority on counts.
-
-## Files
-
-- `app/index.html`, `app/style.css`, `app/app.js` — the atlas itself
-- `app/data/trophies.json` — the official list plus the guide layer
-- `main.ts` — validation and packaging entry point
-- `serve.ts` — minimal development static server
-- `screenshots/` — reference captures of the interface
+The official identity fields—name, description, and grade—are taken character for character from `../cover-kit/gta6-trophy-guide-01-kit/starter/app/data/trophies.json`. Route phases, objectives, order notes, guide steps, hints, estimated hours, and difficulty ratings are guide-authored planning material, not official claims. For triggers that the supplied official wording does not establish, the dossier says to consult the in-game trophy details or tracker rather than presenting a guess as verified fact.
