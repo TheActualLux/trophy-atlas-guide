@@ -3,7 +3,7 @@
 const LS_TICKS = 'trophy-atlas.ticks.v1';
 const LS_SPOILERS = 'trophy-atlas.spoilers.v1';
 const GRADES = ['platinum', 'gold', 'silver', 'bronze'];
-const TAG_FILTERS = ['missable', 'collectible', 'story-critical', 'online'];
+const TAG_FILTERS = ['story-critical', 'collectible', 'activity', 'online', 'endgame', 'grind'];
 
 const state = {
   data: null,
@@ -191,7 +191,7 @@ function renderTop() {
 function chipHtml(id) {
   const t = state.byId.get(id);
   const earned = state.ticks[id] ? ' earned' : '';
-  const miss = t.tags.includes('missable') ? ' missable' : '';
+  const miss = t.missable !== 'Not missable.' ? ' missable' : '';
   return '<span class="chip' + earned + miss + '" data-id="' + id + '">' +
     '<span class="tick" role="checkbox" aria-checked="' + !!state.ticks[id] + '" tabindex="0" ' +
     'data-tick="' + id + '" aria-label="Tick ' + esc(t.name) + '">✓</span>' +
@@ -279,9 +279,11 @@ function renderDossier(id) {
   const next = state.data.trophies[(idx + 1) % 55];
   const phase = state.data.phases.find((p) => p.id === t.phase);
   const tagBadges = t.tags.map((tag) => '<span class="fchip on" style="cursor:default">' + esc(tag) + '</span>').join('');
-  const reqs = t.requires.length
-    ? t.requires.map((r) => chipHtml(r)).join('')
-    : '<span class="did">No explicit prerequisites on this route.</span>';
+  const reqIds = prerequisiteIds(t);
+  const reqs = (t.requires === 'None.'
+    ? '<span class="did">No explicit prerequisites on this route.</span>'
+    : '<span class="did">' + esc(t.requires) + '</span>') + reqIds.map((r) => chipHtml(r)).join('');
+  const missableRisk = t.missable !== 'Not missable.';
   const hintBlock = state.spoilers
     ? '<div class="hint"><span class="hint-label">Spoiler-free hint</span>' + esc(t.hint) + '</div>'
     : '<p class="hint-gated">Hint hidden — turn on the Spoilers switch (or press s) to reveal a spoiler-free hint.</p>';
@@ -294,10 +296,10 @@ function renderDossier(id) {
     '<p class="guide"><em>' + esc(t.description) + '</em></p>' +
     '<div class="dstats">' +
     '<span class="stat"><b>Difficulty</b>' + difficultyDots(t.difficulty) + '</span>' +
-    '<span class="stat"><b>Estimated time</b>' + esc(hoursLabel(t.hours)) + ' (≈ ' + t.minutes + ' min)</span>' +
+    '<span class="stat"><b>Estimated time</b>' + esc(hoursLabel(t.hours)) + '</span>' +
     '<span class="stat"><b>Route phase</b><a href="#route" data-phase="' + esc(t.phase) + '">' + esc(phase ? phase.name : t.phase) + '</a></span>' +
     '</div>' +
-    (t.tags.includes('missable')
+    (missableRisk
       ? '<div class="warn"><b>Missable warning.</b> ' + esc(t.missable) + '</div>'
       : '<div class="warn" style="border-color:var(--line);background:transparent"><b>Missable status.</b> ' + esc(t.missable) + '</div>') +
     '<h3>Route steps</h3><ol class="steps">' + t.steps.map((s) => '<li>' + esc(s) + '</li>').join('') + '</ol>' +
@@ -305,6 +307,7 @@ function renderDossier(id) {
     hintBlock +
     '<h3>Prerequisites</h3><div class="reqs">' + reqs + '</div>' +
     '<h3>Verification</h3><p class="verification">' + esc(t.verification) + '</p>' +
+    '<h3 class="sources-label">Sources</h3><p class="verification"><span class="did">Sources</span> ' + esc(t.sources.join(', ')) + '</p>' +
     '<div class="dnav">' +
     '<button type="button" data-nav="prev">← ' + esc(prev.name) + ' (t' + prev.id + ')</button>' +
     '<span class="spacer"></span>' +
@@ -384,13 +387,18 @@ function wire(root) {
   }
 }
 
+// The `requires` field is a sentence; prerequisite trophies are referenced inside it as t<id>.
+function prerequisiteIds(t) {
+  return (t.requires.match(/t(\d+)/g) || []).map((s) => Number(s.slice(1)));
+}
+
 // First unticked trophy the route can still reach, in phase order.
 function nextUp() {
   for (const phase of state.data.phases) {
     for (const id of phase.trophies) {
       if (state.ticks[id]) continue;
       const t = state.byId.get(id);
-      const blocked = t.requires.some((r) => !state.ticks[r]);
+      const blocked = prerequisiteIds(t).some((r) => !state.ticks[r]);
       if (!blocked) {
         return { id: t.id, name: t.name, phaseName: phase.name };
       }
